@@ -1,0 +1,31 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+body{
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    max-height: 100vh;
+}
+#primerColumna{
+    background-color: aquamarine;
+    padding: 70px;
+    
+}
+#primerColumna span{
+    color:rgb(36, 129, 98) ;
+}
+#primerColumna h1{
+    color:darkcyan;
+}
+h1{
+    text-transform: capitalize;
+}
+div{
+    border: white 7px solid;
+}
+.cont{
+    display: flex;
+    flex-wrap: wrap;
+}

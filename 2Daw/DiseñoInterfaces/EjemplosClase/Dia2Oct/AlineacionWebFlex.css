@@ -1,0 +1,24 @@
+.contenedorPrincipal{
+    display: flex;
+}
+.menuPrincipal{
+    display: flex;
+    flex-direction:column;
+}
+.menuPrincipal img,h1{
+    margin: 20px;
+}
+.menuPrincipal h1{
+    text-align: center;
+}
+.contenidoPagina{
+    display: flex;
+    flex-direction: column;
+}
+.contenidoArticulo{
+    display: flex;
+    margin: 30px;
+}
+.contenidoArticulo img{
+    margin: 30px;
+}

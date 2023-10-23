@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+}
+img{
+    margin:5px ;
+}
+.contenedor{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
