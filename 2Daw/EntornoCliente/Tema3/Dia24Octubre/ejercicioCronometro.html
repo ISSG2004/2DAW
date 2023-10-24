@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contador Regresivo con Formulario</title>
 </head>
 <body>
-    <form>
-        <label for="horas">Introduce hora</label>
-        <input type="number" id="horas" min="0" value="0">
-        <br><br>
-        <label for="minutos">Introduce minutos</label>
-        <input type="number" id="minutos" min="0" value="0">
-        <br><br>
-        <label for="segundos">Introduce segundos</label>
-        <input type="number" id="segundos" min="0" value="0">
-        <button type="button" onclick="cuentaAtras()">Calcular cuenta atrás</button>
+    <form id="countdownForm">
+        <label for="horas">Horas:</label>
+        <input type="number" id="horas" name="horas" min="0">
+        <label for="minutos">Minutos:</label>
+        <input type="number" id="minutos" name="minutos" min="0" max="59">
+        <label for="segundos">Segundos:</label>
+        <input type="number" id="segundos" name="segundos" min="0" max="59">
+        <button type="button" onclick="configurarCuentaRegresiva()">Configurar</button>
+        <br>
+        <h1>Cuenta atrás</h1>
+        <p id="countdown"></p>
     </form>
-    <p id="resultado"></p>
-    
-    <script>
-        function cuentaAtras() {
-            // Obtén los valores de horas, minutos y segundos ingresados por el usuario
-            var horas = parseInt(document.getElementById("horas").value);
-            var minutos = parseInt(document.getElementById("minutos").value);
-            var segundos = parseInt(document.getElementById("segundos").value);
 
-            // Convierte todo a segundos
-            var tiempoEnSegundos = (horas * 3600) + (minutos * 60) + segundos;
-            
-        }   
-    </script>        
-    </body>
+    <script>
+        var x; // Variable global para el intervalo
+
+        function actualizarContador(duracion) {
+            var horaFinal = new Date().getTime() + duracion * 1000;
+
+            x = setInterval(function() {
+                var horaActual = new Date().getTime();
+                var distancia = horaFinal - horaActual;
+
+                var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+                var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+                var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = dias + "d " + horas + "h "
+                + minutos + "m " + segundos + "s ";
+
+                if (distancia < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "0h 0m 0s";
+                    window.alert("Fin boom al lio");
+                }
+            }, 1000);
+        }
+
+        function configurarCuentaRegresiva() {
+            var horas = parseInt(document.getElementById("horas").value) || 0;
+            var minutos = parseInt(document.getElementById("minutos").value) || 0;
+            var segundos = parseInt(document.getElementById("segundos").value) || 0;
+
+            var duracion = (horas * 3600) + (minutos * 60) + segundos;
+
+            if (duracion > 0) {
+                clearInterval(x);
+                actualizarContador(duracion);
+            } else {
+                alert("Por favor, introduce una duración válida.");
+            }
+        }
+    </script>
+</body>
 </html>
