@@ -7,9 +7,11 @@
 </head>
 <body>
 <?php
-        $cadena="Texto dE EjEmplO";
-        $cadenaReemplazada=str_ireplace(['a','e','i','o','u'],['A','E','I','O','U'],$cadena);
-        echo $cadenaReemplazada;
+         $cadenaConA="hola";
+         $cadenaSinA= str_replace("a","/", $cadenaConA);
+         echo "La cadena sin letra a: ".$cadenaSinA;
+        $cadenaConA=str_replace("/","a",$cademaSinA);
+        echo "La cadena original es ".$cadenaConA;
     ?>
 </body>
 </html>
