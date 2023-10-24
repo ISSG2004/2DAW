@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="horas">Introduce hora</label>
+    <input type="number" id="horas"min="0" value="0">
+    <br>
+    <br>
+    <label for="minutos">Introduce minutos</label>
+    <input type="number" id="minutos" min="0"value="0">
+    <br>
+    <br>
+    <label for="segundos">Introduce segundos</label>
+    <input type="number" id="segundos"min="0"value="0">
+    <button type="button" onclick="cuentaAtras()">Calcular cuenta atras</button>
+    <script>
+        //Guardamos los datos introducidos por el usuario
+        var horas=parseInt(document.getElementById("horas").value);
+        var minutos=parseInt(document.getElementById("minutos").value);
+        var segundos=parseInt(document.getElementById("segundos").value);
+        var horaConvertidaSegundos="";
+        //Convertir todo a segundos
+        //Con bucle for hacer la cuenta atrás
+        function cuentaAtras(){
+            
+        }
+    </script>
+</body>
+</html>
