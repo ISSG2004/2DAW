@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="minutos">Minutos:</label>
+    <input type="number" id="minutos" name="minutos" min="0" max="59">
+    <label for="segundos">Segundos:</label>
+    <input type="number" id="segundos" name="segundos" min="0" max="59">
+    <button type="button" onclick="cuentaAtras()">Configurar</button>
+    <br>
+    <div id="ventana">
+        <div id="reloj">
+            
+        </div>
+    </div>
+    <script>
+        function cuentaAtras(){
+            var segundos = parseInt(document.getElementById("segundos").value);
+            var minutos = parseInt(document.getElementById("minutos").value);
+            var llamada;
+            var ceromin='';
+            var ceroseg='';
+            devolvercero(minutos,segundos);
+            document.getElementById("reloj").innerHTML=ceromin+minutos+':'+ceroseg+segundos;
+             if (minutos ===0 && segundos ===0){
+                alert ("Se agotó su tiempo");
+                clearTimeOut(llamada);
+            }
+            if (segundos ==0){
+                minutos --;
+                segundos+=60;   
+            }   
+            segundos --;
+            var llamada = setTimeout(cuentaAtras,1000);
+        }
+       
+        function devolvercero(minutos,segundos){
+            if (minutos<10){
+                ceromin='0';
+               
+            }
+            if (segundos<10){
+                ceroseg='0';
+               
+            }else {
+                ceroseg='';
+            }
+             return ceroseg;return ceromin;
+        }
+    </script>   
+</body>
+</html>
