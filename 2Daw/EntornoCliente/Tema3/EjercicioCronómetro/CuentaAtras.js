@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contador Regresivo con Formulario</title>
-</head>
-<body>
-    <form id="countdownForm">
-        <label for="horas">Horas:</label>
-        <input type="number" id="horas" name="horas" min="0">
-        <label for="minutos">Minutos:</label>
-        <input type="number" id="minutos" name="minutos" min="0" max="59">
-        <label for="segundos">Segundos:</label>
-        <input type="number" id="segundos" name="segundos" min="0" max="59">
-        <button type="button" onclick="configurarCuentaRegresiva()">Configurar</button>
-        <br>
-        <h1>Cuenta atrás</h1>
-        <p id="countdown"></p>
-    </form>
 
-    <script>
         var x; // Variable global para el intervalo
 
         function actualizarContador(duracion) {
@@ -27,10 +8,10 @@
                 var horaActual = new Date().getTime();
                 var distancia = horaFinal - horaActual;
 
-                var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));//Redondeamos
-                var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));//Redondeamos
-                var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));//Redondeamos
-                var segundos = Math.floor((distancia % (1000 * 60)) / 1000);//Redondeamos
+                var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));//Redondeamos convirtiendo a milisegundos
+                var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));//Redondeamos convirtiendo a milisegundos
+                var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));//Redondeamos convirtiendo a milisegundos
+                var segundos = Math.floor((distancia % (1000 * 60)) / 1000);//Redondeamos convirtiendo a milisegundos
 
                 document.getElementById("countdown").innerHTML = dias + "d " + horas + "h "//Mostramos la cantidad introducida
                 + minutos + "m " + segundos + "s ";
@@ -59,6 +40,3 @@
                 alert("Por favor, introduce una duración válida.");
             }
         }
-    </script>
-</body>
-</html>

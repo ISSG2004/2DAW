@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador Regresivo con Formulario</title>
+</head>
+<body>
+    <h1>Cuenta atrás</h1>
+    <h2>Ismael Sánchez González</h2>
+    <script src="CuentaAtras.js"></script>
+    <form id="countdownForm">
+        <label for="horas">Horas:</label>
+        <input type="number" id="horas" name="horas" min="0">
+        <label for="minutos">Minutos:</label>
+        <input type="number" id="minutos" name="minutos" min="0" max="59">
+        <label for="segundos">Segundos:</label>
+        <input type="number" id="segundos" name="segundos" min="0" max="59">
+        <button type="button" onclick="configurarCuentaRegresiva()">Configurar</button>
+        <br>
+        <h1>Cuenta atrás</h1>
+        <p id="countdown"></p>
+    </form>
+
+    
+</body>
+</html>
