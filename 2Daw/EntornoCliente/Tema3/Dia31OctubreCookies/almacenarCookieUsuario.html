@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="setCookie()">Guardar nombre 1</button>
+    <button type="button" onclick="setCookie2()">Guardar nombre 2</button>
+    <button type="button" onclick="getCookie()">Mostrar cuantos registros hay</button>
+    <script>
+        function setCookie(){
+            var nombreUsuario=prompt("Introduce el nombre de usuario");
+            document.cookie=nombreUsuario;
+        }
+        function setCookie2(){
+            var nombreUsuario2=prompt("Introduce el nombre de usuario");
+            document.cookie2=nombreUsuario2;
+        }
+        function getCookie(){
+            alert(document.cookie +" "+document.cookie2)
+        }
+        
+        
+
+    </script>
+    
+</body>
+</html>
