@@ -1,0 +1,10 @@
+.rectangulo{
+    background-color: blueviolet;
+    height: 100px;
+    width: 300px;
+    transform: rotate(45deg);
+    transform: skewX(20deg);
+}
+main{
+    height: 100vh;
+}
