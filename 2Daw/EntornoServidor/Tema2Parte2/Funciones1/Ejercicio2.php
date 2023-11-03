@@ -7,17 +7,17 @@
 </head>
 <body>
     <?php
-        $capital;
+        $capital="";
         $pais="Portugal";
-        $habitantes;
+        $habitantes="";
         function mostrarContent($capital,$pais, $habitantes){
-            if (empty($capital)==false) {
+            if (isset($capital)==true) {
                 $capital="Madrid";
             }
-            if (empty($habitantes)==false) {
+            if (isset($habitantes)==true) {
                 $habitantes="muchos";
             }
-            echo"".$capital."".$pais."".$habitantes;
+            echo"La capital de "." $pais "." es ".$capital." y tiene ".$habitantes." habitantes";
         }
         mostrarContent($capital,$pais,$habitantes);
     ?>
