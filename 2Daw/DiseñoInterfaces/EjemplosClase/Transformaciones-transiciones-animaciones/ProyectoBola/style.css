@@ -1,0 +1,27 @@
+main{
+    height:50vh;
+}
+@keyframes animacion {
+    0% { transform: translate(0%, 0%); }
+    25% { transform: translate(500%, 0%); }
+    50% { transform: translate(500%, 500%); }
+    75% { transform: translate(0%, 500%); }
+    100% { transform: translate(0%, 0%); } 
+}
+.pelota{
+    position: absolute;
+    border-radius: 50%;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    animation: animacion 5s linear infinite;
+}    
+.contenedor{
+    margin: 0 auto;
+    margin-top: 10%;
+    border: 5px solid black;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+
