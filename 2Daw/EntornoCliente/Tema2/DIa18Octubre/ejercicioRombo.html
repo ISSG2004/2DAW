@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Rombo</title>
 </head>
 <body>
-    <div id="caja"></div>
-    <script>
-        var caja = document.getElementById("caja");
-        var limite = 4;
-        //Creciente
-        for (var i = 0; i < limite; i++) {
-            var asterisco = "";
-            var espacioHTML = "";
-            for (var j = 0;  j < limite - j - 1; j++) {
-                espacioHTML += "&nbsp&nbsp";
-            }
-            for (let k = 1; k <= 2 * k + 1; k++) {
-                asterisco += "*";
-            }
-            caja.innerHTML = caja.innerHTML + espacioHTML + asterisco + "<br>";
+  <pre id="romboCanvas"></pre>
+
+  <script>
+    // Tamaño del rombo
+    var tamano = 5;
+
+    // Función para dibujar el rombo
+    function dibujarRombo(tamano) {
+      var rombo = '';
+      for (var i = 1; i <= tamano; i++) {
+        for (var j = 1; j <= tamano - i; j++) {
+          rombo += ' ';
         }
-        //Decreciente
-        for (var i = limite - 2; i >= 0; i--) {
-            var asterisco = "";
-            var espacioHTML = "";
-            for (var k = 0; k < limite - i - 1; k++) {
-                espacioHTML += "&nbsp&nbsp";
-            }
-            for (let j = 1; j <= 2 * i + 1; j++) {
-                asterisco += "*";
-            }
-            caja.innerHTML = caja.innerHTML + espacioHTML + asterisco + "<br>";
+        for (var k = 1; k <= 2 * i - 1; k++) {
+          rombo += '*';
         }
-    </script>
+        rombo += '\n';
+      }
+      for (var i = tamano - 1; i >= 1; i--) {
+        for (var j = 1; j <= tamano - i; j++) {
+          rombo += ' ';
+        }
+        for (var k = 1; k <= 2 * i - 1; k++) {
+          rombo += '*';
+        }
+        rombo += '\n';
+      }
+      return rombo;
+    }
+
+    var romboCanvas = document.getElementById("romboCanvas");
+    romboCanvas.textContent = dibujarRombo(tamano);
+  </script>
 </body>
 </html>

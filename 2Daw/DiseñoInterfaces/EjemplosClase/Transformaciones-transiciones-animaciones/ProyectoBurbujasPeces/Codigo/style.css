@@ -1,0 +1,55 @@
+
+body{
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contenedorPrinc{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../imagenes/FondoMarino.jpeg);
+}
+@keyframes movimientosNemo {
+    0%{transform: translateX(25%);}
+    25%{transform: translateX(100%);}
+    50%{transform: translateX(200%);}
+    75%{transform: translateX(300%);}
+    100%{transform: translateX(400%);}
+}
+@keyframes movimientosTiburon {
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(50%);}
+    20%{transform: translateX(100%);}
+    30%{transform: translateX(150%);}
+    50%{transform: translateX(200%);}
+    75%{transform: translateX(300%);}
+    100%{transform: translateX(350%);}
+}
+@keyframes burbujaMovimiento{
+    0%{transform: translateY(1000%);}
+    100%{transform: translateY(80%);}
+}
+@keyframes burbujaMovimiento2{
+    0%{transform: translateY(200%);}
+    100%{transform: translateY(0%);}
+}
+img.nemo{
+    top: 40vh;
+    position: absolute;
+    animation:movimientosNemo 5s linear infinite;
+}
+img.tiburon{
+    position: absolute;
+    animation: movimientosTiburon 17s linear infinite;
+}
+img.burbujas{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    animation: burbujaMovimiento 9s linear infinite;
+}
+img.burbujas2{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    animation: burbujaMovimiento2 6s linear infinite;
+}
