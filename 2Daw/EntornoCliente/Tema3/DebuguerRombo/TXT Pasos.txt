@@ -1,0 +1,4 @@
+1. Ejecutamos el nuestro código con unra extensión que haga funciones de servidor
+
+2. Abrimos las dev tools(en mi caso con f12 ya que estamos en edge)
+
