@@ -1,4 +1,13 @@
 1. Ejecutamos el nuestro código con unra extensión que haga funciones de servidor
 
-2. Abrimos las dev tools(en mi caso con f12 ya que estamos en edge)
+2. Abrimos las opciones de desarrollador con F12
 
+3. Entras en sources
+
+4. ctrl+p para abrir el archivo que queremos debuguear
+
+5. Click derecho y seleccionas add breakpoint para un breakpoint simple
+
+6. Click derecho y seleccionas add conditional breakpoint
+
+7. F5 para que el edebuguer empiece a ejecutarse
