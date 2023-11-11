@@ -11,3 +11,11 @@
 6. Click derecho y seleccionas add conditional breakpoint
 
 7. F5 para que el edebuguer empiece a ejecutarse
+
+8. Ejecutamos otra vez el debuguer para ver los valores de las variables
+
+9. En el apartado global buscamos las variables
+En nuestro caso las varibles vistas son i,j,k
+teniendo i el valor de 2
+j el valor de 6
+y k el valor de 1
