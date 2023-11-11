@@ -37,3 +37,61 @@ function ejercicio222() {
     }
     window.alert("La raiz cuadrada de "+pedirNumero+" es: "+Math.sqrt(pedirNumero));//mostramos por pantalla la raiz del numero introducido
 }
+function ejercicio231() {
+    let pedirNombres;
+    let salida=false;
+    let contador=0; // Inicializamos el contador a 0
+    do {
+        pedirNombres=prompt("Introduce un nombre, si introduces la palabra fin se finaliza el programa");
+        pedirNombres=pedirNombres.toUpperCase();
+        if (pedirNombres==="FIN") {
+            salida=true;
+        } else {
+            contador++;
+        }
+    } while (salida!=true);
+    alert("Se han mostrado "+contador+" nombres en total"); 
+}
+function ejercicio232() {
+    let pedirNombres;
+    let salida=false;
+    let contador=0; // Inicializamos el contador a 0
+    do {
+        pedirNombres=prompt("Introduce un nombre, si introduces la palabra fin se finaliza el programa");
+        if (pedirNombres==="FIN"||pedirNombres==="fin"||pedirNombres==="Fin") {
+            salida=true;
+        } else {
+            contador++;
+        }
+    } while (salida!=true);
+    alert("Se han mostrado "+contador+" nombres en total"); 
+}
+function ejercicio233() {
+    let cadena=prompt("Introduce la cadena en la que se va a buscar");
+    let palabraAbuscar=prompt("Introduce la palabra a buscar");
+    if (cadena.indexOf(palabraAbuscar)<0){
+        alert("Una leyenda")
+    }else{
+        alert(palabraAbuscar+" está en la posición "+cadena.indexOf(palabraAbuscar))
+    }
+}
+function ejercicio234() {
+    let palabra=prompt("Introduce una palabra y verificaré si es palíndroma");
+    palabra=palabra.toUpperCase();
+    let palabraInvertida="";
+    for (let i = palabra.length-1; i >= 0; i--) {
+        palabraInvertida += palabra.charAt(i);
+    }
+    if (palabra===palabraInvertida) {
+        alert("La palabra es palíndroma");
+    } else {
+        alert("La palabra no es palíndroma");
+    }
+}
+function ejercicio237() {
+    let oracion = prompt("Ingrese una oración:");
+    let palabras = oracion.split(" ");
+    for (let i = 0; i < palabras.length; i++) {
+        document.write(palabras[i] + "<br>");
+    }
+}
