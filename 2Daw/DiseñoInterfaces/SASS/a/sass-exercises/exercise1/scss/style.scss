@@ -1,0 +1,66 @@
+@import 'variables.scss';
+*{
+    font-family: $fontstack;
+}
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav{
+    ul{
+        display: flex;
+        li:last-of-type{
+            border: 2px $colorSecundario solid;
+        }
+        li{
+            border-left: 2px $colorSecundario solid;
+            border-top: 2px $colorSecundario solid;
+            border-bottom: 2px $colorSecundario solid;
+            background-color: $colorPrimario;
+            list-style-type: none;
+            padding-top: 10px;
+            height: 40px;
+            width: 500px;
+            text-align: center;
+            color: $colorSecundario;
+            a{
+                color: inherit;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            &:hover{
+                background-color: $colorSecundario;
+                color: $colorPrimario;
+            }
+            
+        }
+    }
+}
+main{
+    h1{
+        color: $colorSecundario; 
+        margin-left: 35px;
+    }
+    ul{
+        margin-left: 0;
+        li{
+            line-height: 1.6;
+        }
+    }
+}
+@media(max-width:800px){
+    nav{
+        ul{
+            flex-direction: column;
+        li{
+            width: 95%;
+            border: 2px $colorSecundario solid
+        }    
+        }
+    }
+    main{
+        h1{
+            margin-left: 35px;
+        }
+    }
+}
