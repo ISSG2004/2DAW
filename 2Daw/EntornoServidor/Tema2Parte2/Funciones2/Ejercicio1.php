@@ -9,14 +9,13 @@
     <?php
         $numero1=5;
         $numero2=10;
-        function intercambiarNumeros($numero1,$numero2){
-            $aux=$numero1;
-            $numero1=$numero2;
-            $numero2=$aux;
-            
+        function intercambiar_numeros($numero1, $numero2) {
+            list($numero1,  $numero2) = array( $numero2, $numero1);
+            echo "El primer número es: " . $numero1 . "<br>";
+            echo "El segundo número es: " .  $numero2 . "<br>";
+            return array($numero1,  $numero2);
         }
-        intercambiarNumeros($numero1,$numero2);
-        echo $numero1
+        
     ?>
 </body>
 </html>
