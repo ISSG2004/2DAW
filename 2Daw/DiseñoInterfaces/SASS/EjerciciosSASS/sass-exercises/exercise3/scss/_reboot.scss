@@ -1,0 +1,27 @@
+
+body{
+    font-family: $fontstack-text;
+    @include layout(white,1rem );
+
+    @media(min-width:600px){
+        @include layout(black,1.25rem);
+    }
+}
+main{
+    h1{
+        font-family: $fontstack-titles;
+        font-size: 1.75rem;
+        padding-bottom: 2rem;
+    }
+}
+article{
+    padding-bottom: 2rem;
+}
+a{
+    width: 130px;
+    font-family: $fontstack-titles;
+    @include layout(black,1rem);
+    &:hover{
+        @include layout(dimgray,1rem)
+    }
+}
