@@ -1,0 +1,5 @@
+@mixin frame($thickness,$style,$style,$color-border,$color-bg,$padding,$radius){
+    border:$thickness,$style,$color-border;
+    background-color:$color-bg;
+    padding:$padding;
+}

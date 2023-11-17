@@ -1,0 +1,19 @@
+/* Error: Declarations may only be used within style rules.
+ *   ,
+ * 2 |     color: $color;
+ *   |     ^^^^^^^^^^^^^
+ *   '
+ *   scss\_mixins.scss 2:5  layout()
+ *   scss\_reboot.scss 7:5  @import
+ *   scss\style.scss 4:9    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Declarations may only be used within style rules.\a   \2577 \a 2 \2502      color: $color;\d\a   \2502      ^^^^^^^^^^^^^\a   \2575 \a   scss\\_mixins.scss 2:5  layout()\a   scss\\_reboot.scss 7:5  @import\a   scss\\style.scss 4:9    root stylesheet";
+}
