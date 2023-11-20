@@ -1,0 +1,8 @@
+@each $class, $color in $color-map {
+    @for $i from 0 through 10 {
+      $percentage: $i * 10;
+    .bg-#{$class}-#{$percentage} {
+        background-color: rgba($color, $percentage / 100);
+    }
+    }
+}

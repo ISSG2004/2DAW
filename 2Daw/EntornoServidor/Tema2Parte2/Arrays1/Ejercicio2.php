@@ -8,7 +8,20 @@
 <body>
     <?php
         $alumnos=array("Juan","Paco","Gabriel","Manolo","Jose");
-        array_slice($alumnos,0,3);
+        $tresPrimeros=array_slice($alumnos,0,3);
+        $dosUltimos=array_slice($alumnos,3,4);
+        echo"<ul>";
+        echo"<li>Tres primeros alumnos</li>";
+        for ($i=0; $i <sizeof($tresPrimeros); $i++) { 
+            echo"<li>".$tresPrimeros[$i]."</li>";
+        }
+        echo"</ul>";
+        echo"<ul>";
+        echo"<li>Dos Ultimos alumnos</li>";
+        for ($i=0; $i <sizeof($dosUltimos); $i++) { 
+            echo"<li>".$dosUltimos[$i]."</li>";
+        }
+        echo"</ul>";
     ?>
 </body>
 </html>
