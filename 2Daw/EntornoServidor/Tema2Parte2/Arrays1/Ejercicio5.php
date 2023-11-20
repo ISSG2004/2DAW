@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        $pila = array(“cinco” => 5, “uno”=>1, “cuatro”=>4, “dos”=>2, “tres”=>3);
+        $pila = array("cinco" => 5, "uno"=>1, "cuatro"=>4, "dos"=>2, "tres"=>3);
         echo "Usando asort:<ul>";
         asort($pila);
         foreach ($pila as $numero => $n) {
