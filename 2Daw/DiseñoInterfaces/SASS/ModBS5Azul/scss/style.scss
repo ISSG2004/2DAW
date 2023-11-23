@@ -1,0 +1,28 @@
+$breadcrumb-divider: ".";
+
+@mixin breadcrumb-divider {
+  &:not(:last-child)::before {
+    float: left;
+    padding-right: 0.5rem;
+    transform: translateY(-3px);
+    color: #6c757d;
+    content: $breadcrumb-divider;
+  }
+  
+  &:last-child::before {
+    content: $breadcrumb-divider;
+    transform: translateY(-3px);
+  }
+}
+
+.breadcrumb {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 10px;
+
+  .breadcrumb-item {
+    @include breadcrumb-divider;
+  }
+}
