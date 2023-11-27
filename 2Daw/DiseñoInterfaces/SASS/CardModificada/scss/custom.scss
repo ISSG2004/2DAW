@@ -1,0 +1,10 @@
+@import "../bootstrap/scss/bootstrap.scss";
+
+//variables personalizadas
+$card-isg-bg:#4d4646;
+//variables actualizadas
+
+//creacion de mi propia carta
+.card-isg{
+    background-color: $card-isg-bg;
+}
