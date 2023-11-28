@@ -27,10 +27,21 @@
 @import "../bootstrap/scss/helpers";
 @import "../bootstrap/scss/breadcrumb";
 @import "../bootstrap/scss/card";
+@import "../bootstrap/scss/pagination";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-
-
+a{
+    text-decoration: none;
+}
+.card{
+    max-width: 540px;
+    padding: 20px;
+}
+li.breadcrumb-item:hover{
+    background-color: blue;
+    color: white;
+}
+@mixin breadcrumb-separator{}
