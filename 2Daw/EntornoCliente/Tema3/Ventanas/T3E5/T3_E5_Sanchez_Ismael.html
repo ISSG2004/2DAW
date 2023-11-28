@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ventana Principal</title>
+    <script>
+        // Declarar la variable fuera de las funciones para que sea global
+        var ventanaSecundaria;
+
+        // Función para abrir una nueva ventana
+        function abrirVentana() {
+            ventanaSecundaria = window.open("", "_blank", "width=400,height=400");
+        }
+
+        // Función para cerrar la ventana secundaria
+        function cerrarVentanaSecundaria() {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                ventanaSecundaria.close();
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+
+        // Función para obtener y establecer las coordenadas de la ventana secundaria
+        function obtenerCoordenadas() {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                var x = prompt("Introduce la coordenada x para la ventana secundaria:");
+                var y = prompt("Introduce la coordenada y para la ventana secundaria:");
+                ventanaSecundaria.moveTo(x, y);
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+
+        // Función para seleccionar y aplicar el color de fondo de la ventana secundaria
+        function seleccionarColor() {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                var color = document.getElementById("colorSelect").value;
+                ventanaSecundaria.document.body.style.backgroundColor = color;
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+
+        // Función para enfocar la ventana secundaria
+        function aplicarFocus() {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                ventanaSecundaria.focus();
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+
+        // Función para desenfocar la ventana secundaria
+        function aplicarBlur() {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                ventanaSecundaria.blur();
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+
+        // Función para cerrar la ventana después de un tiempo predeterminado
+        function cerrarDespuesDeTiempo() {
+            var tiempoActivo = 10; // Establecer un tiempo predeterminado en segundos
+            setTimeout(function () {
+                if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                    ventanaSecundaria.close();
+                }
+            }, tiempoActivo * 1000);
+        }
+
+        // Función para establecer un texto en la ventana secundaria
+        function establecerTexto() {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                var texto = prompt("Ingresa el texto para mostrar en la ventana secundaria:");
+                var tamanoTexto = prompt("Ingresa el tamaño de texto (en píxeles):");
+                var colorTexto = prompt("Ingresa el color del texto:");
+
+                // Crear un elemento h1 en la ventana secundaria y aplicar estilos
+                var h1 = ventanaSecundaria.document.createElement("h1");
+                h1.innerText = texto;
+                h1.style.fontSize = tamanoTexto + "px";
+                h1.style.color = colorTexto;
+                ventanaSecundaria.document.body.appendChild(h1);
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+
+        // Función que se ejecuta al cargar la ventana principal
+        window.onload = function () {
+            cerrarDespuesDeTiempo();
+            establecerTexto();
+        }
+    </script>
+</head>
+<body>
+    <!-- Botones para interactuar con la ventana secundaria -->
+    <button type="button" onclick="abrirVentana();">Abrir Ventana</button>
+    <button type="button" onclick="cerrarVentanaSecundaria();">Cerrar Ventana Secundaria</button>
+    <button type="button" onclick="obtenerCoordenadas();">Obtener Coordenadas</button>
+
+    <!-- Selección de color y botón para aplicar el color de fondo -->
+    <select id="colorSelect">
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+    </select>
+    <button onclick="seleccionarColor();">Aplicar Color</button>
+
+    <!-- Botones para enfocar, desenfocar y cerrar después de un tiempo -->
+    <button onclick="aplicarFocus();">Focus en Ventana</button>
+    <button onclick="aplicarBlur();">Blur en Ventana</button>
+    <button type="button" onclick="cerrarDespuesDeTiempo()">Cerrar después de un tiempo</button>
+
+    <!-- Botón para establecer un texto en la ventana secundaria -->
+    <button type="button" onclick="establecerTexto()">Crear texto en ventana secundaria</button>
+
+    <!-- Botón para cerrar la ventana principal -->
+    <button onclick="window.close();">Cerrar</button>
+</body>
+</html>
