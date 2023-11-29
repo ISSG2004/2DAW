@@ -96,9 +96,11 @@ function generarRandom(longitud) {//metodo que genera un random
 function mostrarFrases() {
     let todasLasFrases=formarFrase();
     let contador=0;
-    let frasesMostradas="";
-    frasesMostradas=frasesMostradas+todasLasFrases[contador];
-    document.getElementById("discurso").innerHTML=frasesMostradas;
-    contador++;
-    
+    if (contador===14) {
+        document.getElementById("discurso").innerHTML="Ya no se pueden generar más frases";
+    } else {
+        document.getElementById("discurso").innerHTML=todasLasFrases[contador];
+        contador++;
+    }
 }
+//añadir lo de las cookies para ver cuantas veces se ha hecho click 
