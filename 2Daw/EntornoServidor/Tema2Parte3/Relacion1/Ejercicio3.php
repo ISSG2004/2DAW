@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <ul>
+        <?php
+            if (isset($_POST['enviar'])){
+                echo"<li>Texto en búsqueda: ".$_REQUEST["TxtBusq"]."</li>";
+                echo"<li>Buscar en: ".$_REQUEST["DondeBuscar"]."</li>";
+                echo"<li>Género : ".$_REQUEST["Genero"]."</li>";
+            }else{}
+        ?>
+    </ul>
     <h1>Formulario simple</h1>
     <h2>Búsqueda de canciones</h2>
     <form action="Ejercicio1.php" method="post">
@@ -35,7 +44,7 @@
         </select>
         <br>
         <br>
-        <button type="submit">Buscar</button>
+        <button type="submit" name="enviar">Buscar</button>
         </fieldset>
     </form>
 </body>

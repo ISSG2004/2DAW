@@ -15,13 +15,14 @@
             echo"<li>Lo veremos en el ejercicio4</li>";
             echo"<li>contraseña: ".$_REQUEST["password"]."</li>";
             echo"<li>Color: ".$_REQUEST["color"]."</li>";
-            $idiomas=$_REQUEST["idioma[]"];
-            $idiomasEscogidos="";
+            $idiomas = $_REQUEST["idioma"];
+            $idiomasEscogidos = "";
             foreach ($idiomas as $idioma) {
-                $idiomasEscogiods=$idiomasEscogidos+$idioma+" , ";
+                echo "<li>Idiomas: ".$idioma."</li>";
+                $idiomasEscogidos .= $idioma . "; ";
             }
-            echo"<li>Idioma : ".$idiomasEscogidos."</li>";
             echo"<li>comentario: ".$_REQUEST["comentario"]."</li>";
+            echo"<li>El campo file lo veremos en el ejercicio 4</li>";
         ?>
     </ul>
 </body>

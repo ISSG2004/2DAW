@@ -47,15 +47,16 @@
         </select>
         <hr>
         <h4>SELECT MÚLTIPLE</h4>
-        <select multiple size="3" name="idioma[]" value="idioma">
-            <option value="idioma">Inglés</option>
-            <option value="idioma">Francés</option>
-            <option value="idioma">Aleman</option>
+        <label for="idioma">Idiomas:</label>
+        <select multiple size="3" name="idioma[]">
+            <option value="ingles">Inglés</option>
+            <option value="frances">Francés</option>
+            <option value="aleman">Aleman</option>
         </select>
         <hr>
         <h3>Elemento TEXTAREA</h3>
         <label for="comentario">Comentario: </label>
-        <textarea name="comentario" cols="40" rows="10" value="Este libro me parece..."></textarea>
+        <textarea name="comentario" cols="40" rows="10">Este libro me parece...</textarea>
         <hr>
         <button type="submit">enviar datos</button>
         <button type="reset">borrar datos</button>
