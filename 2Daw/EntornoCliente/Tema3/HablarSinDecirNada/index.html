@@ -19,20 +19,25 @@
     </header>
     <main class="container">
         <div class="row ">
+            <div class="col">&NonBreakingSpace;</div>
             <div class="col ">
                 <h1 >Hablar sin decir nada</h1>
-                <h4>Ismael Sánchez González</h4>
+                <h2 id="mostrarCookie"> Has pulsado 0 veces </h2> 
             </div>
+            <div class="col">&NonBreakingSpace;</div>
         </div>
         <br>
         <div class="row">
             <div class="col">
                 <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-primary" onclick="formarFrase() ">Generar frases</button>
-                    <br>
-                    <button type="button" class="btn btn-primary" onclick="mostrarFrases() ">Mostrar Frases</button>
+                    <button type="button" id="miBoton" class="btn btn-primary" onclick="ejecutarPrograma() ">Mostrar Frases</button>
                 </div>
             </div>
+            <div class="col">
+                <div class="d-grid gap-2">
+                    <button type="button" id="miBoton" class="btn btn-primary" onclick="reiniciarPrograma() ">Reiniciar las frases y la cookie</button>
+                </div>
+            </div>  
         </div>
         <div class="row">
             <div class="col">
