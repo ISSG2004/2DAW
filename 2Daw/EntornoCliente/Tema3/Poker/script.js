@@ -1,5 +1,43 @@
-// Definir funciones para calcular las figuras
-function esDoblePareja(numero) {
+//inicializamos todas las cookies a 0 al iniciar la web
+reiniciarCookies();
+var parejaDoble=0,trio=0,escaleraSimple=0,escaleraCompleta=0,poker=0,jugadasRealizadas=0;//inicializamos las variables para controlar cuantas combinaciones se han introducido
+//metodo para identificar cada figura
+function calcularFigura() {
+    const numeroInput = document.getElementById('numeroInput').value;
+    if (/^\d{4}$/.test(numeroInput)) {
+        const numero = parseInt(numeroInput);
+        let figura = "";
+        jugadasRealizadas++;
+        if (esDoblePareja(numero)) {
+            figura = 'Doble Pareja';
+            parejaDoble++;
+            setCookie("parejaDoble",parejaDoble.toString(),365)
+        } else if (esTrio(numero)) {
+            figura = 'Trio';
+            trio++;
+            setCookie("trio",trio.toString(),365)
+        } else if (esEscaleraSimple(numero)) {
+            figura = 'Escalera Simple';
+            escaleraSimple++;
+            setCookie("escaleraSimple",escaleraSimple.toString(),365)
+        } else if (esEscaleraCompleta(numero)) {
+            figura = 'Escalera Completa';
+            escaleraCompleta++;
+            setCookie("escaleraCompleta",escaleraCompleta.toString(),365)
+        } else if (esPocker(numero)) {
+            figura = 'Poker';
+            poker++;
+            setCookie("poker",poker.toString(),365)
+        }
+
+        alert(`Figura: ${figura}`);
+        ventana();
+    } else {
+        alert('Por favor, ingrese un número de 4 cifras.');
+    }
+}
+//verificacion de combinacion de numeros
+function esDoblePareja(numero) {//doble pareja
     const cifras = String(numero).split('');
     const contador = {};
 
@@ -17,7 +55,7 @@ function esDoblePareja(numero) {
     return parejas === 2;
 }
 
-function esTrio(numero) {
+function esTrio(numero) {//trio
     const cifras = String(numero).split('');
     const contador = {};
 
@@ -28,17 +66,17 @@ function esTrio(numero) {
     return Object.values(contador).includes(3);
 }
 
-function esEscaleraSimple(numero) {
+function esEscaleraSimple(numero) {//escalera simple
     const cifras = String(numero).split('').map(Number);
     return cifras[0] === cifras[1] - 1 && cifras[1] === cifras[2] - 1;
 }
 
-function esEscaleraCompleta(numero) {
+function esEscaleraCompleta(numero) {//escalera completa
     const cifras = String(numero).split('').map(Number);
     return cifras[0] === cifras[1] - 1 && cifras[1] === cifras[2] - 1 && cifras[2] === cifras[3] - 1;
 }
 
-function esPocker(numero) {
+function esPocker(numero) {//poker
     const cifras = String(numero).split('');
     const contador = {};
 
@@ -49,116 +87,34 @@ function esPocker(numero) {
     return Object.values(contador).includes(4);
 }
 
-function calcularFigura() {
-    const numeroInput = document.getElementById('numeroInput').value;
-
-    if (/^\d{4}$/.test(numeroInput)) {
-        const numero = parseInt(numeroInput);
-
-        let figura = 'Ninguna';
-        if (esDoblePareja(numero)) {
-            figura = 'Doble Pareja';
-        } else if (esTrio(numero)) {
-            figura = 'Trio';
-        } else if (esEscaleraSimple(numero)) {
-            figura = 'Escalera Simple';
-        } else if (esEscaleraCompleta(numero)) {
-            figura = 'Escalera Completa';
-        } else if (esPocker(numero)) {
-            figura = 'Pocker';
-        }
-
-        alert(`Figura: ${figura}`);
-        mostrarVentanaEstadisticas();
-    } else {
-        alert('Por favor, ingrese un número de 4 cifras.');
-    }
+//cookies
+// Función para establecer el valor de una cookie
+function setCookie(nombre, valor, dias) {
+    const fechaExpiracion = new Date();
+    fechaExpiracion.setDate(fechaExpiracion.getDate() + dias);
+    const cookieValue = escape(valor) + ((dias === null) ? '' : '; expires=' + fechaExpiracion.toUTCString());
+    document.cookie = nombre + '=' + cookieValue + '; path=/';
 }
 
-function mostrarVentanaEstadisticas() {
-    const estadisticasVentana = window.open('', 'Estadisticas', 'width=400,height=300');
-    estadisticasVentana.document.write('<h2>Estadísticas</h2>');
+//reiniciar cookies
+function reiniciarCookies() {
+    setCookie(parejaDoble, '0', 365);
+    setCookie(trio, '0', 365);
+    setCookie(escaleraSimple, '0', 365);
+    setCookie(escaleraCompleta, '0', 365);
+    setCookie(poker, '0', 365);
+}
 
-    // Ejemplo: Calcular y mostrar porcentajes
-    const totalIntentos = obtenerTotalIntentos(); // Función hipotética para obtener el total de intentos
-    const porcentajeDoblePareja = calcularPorcentajeDoblePareja(totalIntentos);
-    const porcentajeTrio = calcularPorcentajeTrio(totalIntentos);
-    const porcentajeEscaleraSimple = calcularPorcentajeEscaleraSimple();
-    const porcentajeEscaleraCompleta = calcularPorcentajeEscaleraCompleta();
-    const porcentajePocker = calcularPorcentajePocker();
-    // Agrega más funciones para calcular porcentajes de otras figuras según sea necesario
-
-    // Mostrar porcentajes en la ventana
-    estadisticasVentana.document.write(`<p>Doble Pareja: ${porcentajeDoblePareja.toFixed(2)}%</p>`);
-    estadisticasVentana.document.write(`<p>Trio: ${porcentajeTrio.toFixed(2)}%</p>`);
-    estadisticasVentana.document.write(`<p>Escalera Simple: ${porcentajeEscaleraSimple.toFixed(2)}%</p>`);
-    estadisticasVentana.document.write(`<p>Escalera Completa: ${porcentajeEscaleraCompleta.toFixed(2)}%</p>`);
-    estadisticasVentana.document.write(`<p>Pocker: ${porcentajePocker.toFixed(2)}%</p>`);
-    // Agrega más líneas para mostrar porcentajes de otras figuras
-
-    // Cerrar la ventana después de 10 segundos
-    setTimeout(function () {
-        estadisticasVentana.close();
+//ventana
+function ventana() {
+    var ventana=window.open("","estadisticas,","width=400px,height=400px");
+    let porcentajeDoblePareja=((parejaDoble/jugadasRealizadas)*100);
+    let porcentajeEscaleraSimple=((escaleraSimple/jugadasRealizadas)*100);
+    let porcentajeEscaleraCompleta=((escaleraCompleta/jugadasRealizadas)*100);
+    let porcentajeTrio=((trio/jugadasRealizadas)*100);
+    let porcentajePoker=((poker/jugadasRealizadas)*100);
+    ventana.document.write("<h1>Estadisticas de las jugadas</h1><br><p>Porcentaje doble pareja :"+porcentajeDoblePareja+" %</p><br><p>Porcentaje trio :"+porcentajeTrio+" %</p><br><p>Porcentaje escalera simple :"+porcentajeEscaleraSimple+" %</p><br><p>Porcentaje escalera completa :"+porcentajeEscaleraCompleta+" %</p><br><p>Porcentaje de poker :"+porcentajePoker+" %</p>");
+    setTimeout(function() {
+        ventana.close();
     }, 10000);
 }
-
-// Funciones para calcular porcentajes de otras figuras
-function calcularPorcentajeDoblePareja(totalIntentos) {
-    const doblePareja = parseInt(getCookie('doblePareja')) || 0;
-    return totalIntentos !== 0 ? (doblePareja / totalIntentos) * 100 : 0;
-}
-
-function calcularPorcentajeTrio(totalIntentos) {
-    const trio = parseInt(getCookie('trio')) || 0;
-    return totalIntentos !== 0 ? (trio / totalIntentos) * 100 : 0;
-}
-
-function calcularPorcentajeEscaleraSimple() {
-    const escaleraSimple = parseInt(getCookie('escaleraSimple')) || 0;
-    return obtenerTotalIntentos() !== 0 ? (escaleraSimple / obtenerTotalIntentos()) * 100 : 0;
-}
-
-function calcularPorcentajeEscaleraCompleta() {
-    const escaleraCompleta = parseInt(getCookie('escaleraCompleta')) || 0;
-    return obtenerTotalIntentos() !== 0 ? (escaleraCompleta / obtenerTotalIntentos()) * 100 : 0;
-}
-
-function calcularPorcentajePocker() {
-    const pocker = parseInt(getCookie('pocker')) || 0;
-    return obtenerTotalIntentos() !== 0 ? (pocker / obtenerTotalIntentos()) * 100 : 0;
-}
-
-function calcularPorcentajePocker(totalIntentos) {
-    const pocker = parseInt(getCookie('pocker')) || 0;
-    return totalIntentos !== 0 ? (pocker / totalIntentos) * 100 : 0;
-}
-function actualizarEstadisticas(figura) {
-    contador++; // Incrementar el contador total de jugadas
-    actualizarCookieVecesJugado(contador);
-
-    let estadisticasGuardadas = JSON.parse(localStorage.getItem('estadisticas')) || {};
-    estadisticasGuardadas[figura] = (estadisticasGuardadas[figura] || 0) + 1;
-
-    // Calcular porcentajes
-    const porcentajes = {};
-    for (const cifra in estadisticasGuardadas) {
-        porcentajes[cifra] = (estadisticasGuardadas[cifra] / contador) * 100;
-    }
-
-    // Guardar estadísticas en el almacenamiento local
-    localStorage.setItem('estadisticas', JSON.stringify(estadisticasGuardadas));
-}
-
-function calcularEstadisticas(numero) {
-    const cifras = String(numero).split('');
-    const contador = {};
-
-    for (const cifra of cifras) {
-        contador[cifra] = (contador[cifra] || 0) + 1;
-    }
-
-    return contador;
-}
-
-
-// Otros elementos relacionados con el manejo de cookies pueden agregarse aquí.
