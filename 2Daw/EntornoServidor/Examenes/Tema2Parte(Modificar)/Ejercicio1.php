@@ -5,29 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        td{padding: 5px;}
     </style>
 </head>
 <body>
-    <?php
-        $altura = 5;
-        
-        function tablaArbol($altura){
-            $arbol=array();
-            echo "<table border='1'>";
-            for ($i = 0; $i < $altura; $i++) {
-                echo "<tr>";
-                for ($j = 0; $j < 2; $j++) {
-                    echo "<td>";
-                    echo $arbol[$i];
-                    echo "</td>";
-                }
-                echo "</tr>";
+<?php
+//Abajo en el body se encuentra la llamada de la función
+    function plantarArbol($altura)
+    {
+        $arbol = array();
+        for ($i = $altura; $i > 0; $i--) {
+            $fila = array();
+            //Parte izquierda de la nieve
+            for ($j = 1; $j < $i; $j++) {
+                array_push($fila, '*');
             }
-            echo "</table>";
+            //Parte izquierda y central del árbol
+            for ($j = $altura - $i; $j >= 0; $j--) {
+                array_push($fila, '\\');
+            }
+            //Parte derecha del árbol
+            for ($j = $altura - $i; $j > 0; $j--) {
+                array_push($fila, '\\');
+            }
+            //Parte derecha de la nieve
+            for ($j = 1; $j < $i; $j++) {
+                array_push($fila, '*');
+            }
+            array_push($arbol, $fila);
         }
-        tablaArbol($altura);
-    ?>
+        dibujarArbol($arbol);
+    }
+
+    function dibujarArbol($arbol)
+    {
+        echo "<table class='margin: 0 auto;'>";
+        foreach ($arbol as $fila) {
+            echo "<tr>";
+            foreach ($fila as $columna) {
+                switch ($columna) {
+                    case '*':
+                        echo "<td style='background-color: #00FFFF; color: white; width: 10px; text-align: center;'>$columna</td>";
+                        break;
+
+                    case '\\':
+                        echo "<td style='background-color: #00FFFF; color: green; width: 10px; text-align: center;'>$columna</td>";
+                        break;
+                }
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+    }
+    plantarArbol(13);
+?>
+
+</body>
 </body>
 </html>
 
