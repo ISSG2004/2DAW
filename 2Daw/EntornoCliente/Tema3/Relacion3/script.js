@@ -95,3 +95,27 @@ function ejercicio237() {
         document.write(palabras[i] + "<br>");
     }
 }
+function ejercicio34() {
+    window.open("","","width=600px,height=300px")
+}
+function ejercicio35() {
+    let numAleatorio=parseInt(Math.random()*3);
+    if (numAleatorio==0)
+        window.location='http://www.hotmail.com';
+    else if (numAleatorio==1)
+        window.location='http://www.gmail.com';
+    else
+        window.location='http://www.yahoo.com';
+}
+function ejercicio37() {
+    let anchoMonitor= window.screen.width,alturaMonitor=window.screen.height;
+    window.open("","","width=100px,height=50px");
+    window.resizeTo(anchoMonitor,alturaMonitor/2);
+}
+function ejercicio38() {
+    if (navigator.cookieEnabled ) {
+        alert("Las cookies están activadas")
+    } else {
+        alert("Las cookies están desactivadas.");
+    } 
+}
