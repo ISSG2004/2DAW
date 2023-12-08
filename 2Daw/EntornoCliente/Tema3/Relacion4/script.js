@@ -36,3 +36,12 @@ mostrarVector('mayores', vectorMayorIgual250, 'Tercer Vector (mayor o igual a 25
 document.getElementById('menores').textContent = `Tamaño del segundo vector (menor a 250): ${vectorMenor250.length}`;
 document.getElementById('mayores').textContent = `Tamaño del tercer vector (mayor o igual a 250): ${vectorMayorIgual250.length}`;
 }
+/*
+Crear un vector de 1000 elementos que representen los números  de una rifa. Las
+posiciones indicaran los números que tienen premio. Almacena en dichas posiciones,
+generadas de forma aleatoria, 10 premios con las cantidades 1000,2000,3000 etc. .
+Imprime los números con premio y las cantidades de los mismos
+*/
+function ej46() {
+    var rifa=[1000];
+}
