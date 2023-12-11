@@ -1,0 +1,61 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root{/*Variables para los colores*/
+    --color-principal:#212529;
+    --color-secundario:#a4a5a6;
+    --color-boton:#0095DA;
+    --texto-boton:#fff;
+}
+.btn_azul {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--color-boton);
+    border-radius: 5px;
+    color: var(--texto-boton);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-align: center;
+}
+.contImagenPortada{
+    padding: 0;
+}
+.btn_azul:visited{
+    color: var(--texto-boton);
+}
+h3~p{
+    color: var(--color-principal);
+}
+.imagenPortada{
+    display: none;
+}
+.imagenReparto{
+    width: 100%;
+}
+@media(min-width:768px){
+    .imagenPortada{
+        display: none;
+    }
+}
+
+@media(min-width:992px){
+    .imagenReparto{
+        width:80% ;
+    }
+    .imagenPortada{
+        display: block;
+        
+    }
+    .imagenPortada,.carousel{
+        height: 700px;
+        padding: 0;
+        margin:0;
+    }
+}
