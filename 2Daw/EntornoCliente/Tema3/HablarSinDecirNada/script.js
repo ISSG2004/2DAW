@@ -151,7 +151,7 @@ var frases4 = [
     //metodo para usar todos los metodos
     function ejecutarPrograma(){
         miBoton.addEventListener('click', contarClics);//creamos el evento. El segundo metodo de este llamaría a la función contar clicks
-        mostrarFrases();
+        //mostrarFrases();
     }
     //metodo para reiniciar los arrays de frases
     function reiniciarFrases(){

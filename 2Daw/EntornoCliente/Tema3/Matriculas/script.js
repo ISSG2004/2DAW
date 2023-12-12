@@ -154,3 +154,4 @@ function ventana() {
         ventana.close();
     }, 10000);
 }
+
