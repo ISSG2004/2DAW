@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen R4_abcde_Ismael Sánchez</title>
+</head>
+<body>
+    <h1>Examen R4_abcde_Ismael</h1>
+    <table>
+        <tr>
+            <td>
+                <button type="button" onclick="funcionalidadVentana1()">Abrir ventana1</button> 
+            </td>
+            <td>
+                <button type="button" onclick="funcionalidadVentana2()">Abrir ventana2</button>
+                
+            </td>
+            <td>
+                <button type="button" onclick="funcionalidadVentana3()">Abrir ventana3</button>       
+            </td>
+            <td>
+                <button type="button" onclick="funcionalidadVentana4()">Abrir ventana4</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="closeVentana1">Cerrar ventana1</button>    
+            </td>
+            <td>
+                <button type="button" id="closeVentana2">Cerrar ventana2</button>    
+            </td>
+            <td>                
+                <button type="button" id="closeVentana3">Cerrar ventana3</button>    
+            </td>
+            <td>
+                <button type="button" id="closeVentana4">Cerrar ventana4</button>    
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select name="longitudLista" id="longitud">
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                </select>
+                <br>
+                <button type="button" onclick="crearLongitud()" id="btn_longitud">Enviar longitud</button>
+            </td>
+            <td>
+                <select name="valoresRandomCantidad" id="valoresRandom">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <br>
+                <button type="button" onclick="seleccionarRango()">Enviar rango</button>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
