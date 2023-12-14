@@ -2,7 +2,6 @@ var votoPP = 0, votoVOX = 0, votoPSOE = 0, votoSumar = 0, votoPacma = 0, votoNul
 miBoton.addEventListener('click', contarClics);
 function validarVoto() {
     var partidoVotado = document.getElementById("partidoPolitico").value;
-
     partidoVotado = partidoVotado.trim().toLowerCase();
 
     switch (partidoVotado) {
