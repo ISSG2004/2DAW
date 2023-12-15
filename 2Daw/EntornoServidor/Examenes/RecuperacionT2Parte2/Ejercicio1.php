@@ -14,7 +14,7 @@
             return $array[0] + sumarValoresArrayRec(array_slice($array, 1));//realizamos la llamada recursiva
         }//consiste en coger la primera posicion del array, y vas cogiendo de una posición en una
 
-        $array = array(1,2,3,4,5);
+        $array = array("a"=>1,"b"=>2);
         echo "Suma de todos los valores del array: " .sumarValoresArrayRec($array);
     ?>
 </body>

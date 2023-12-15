@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestPersona",
+            "request": "launch",
+            "mainClass": "com.example.TestPersona",
+            "projectName": "herancia2"
+        },
+        {
+            "type": "java",
+            "name": "TestPersona",
+            "request": "launch",
+            "mainClass": "main.java.com.example.TestPersona",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "TestPersona",
+            "request": "launch",
+            "mainClass": "TestPersona",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "ProgramaEmpleados",
             "request": "launch",
             "mainClass": "ProgramaEmpleados",
