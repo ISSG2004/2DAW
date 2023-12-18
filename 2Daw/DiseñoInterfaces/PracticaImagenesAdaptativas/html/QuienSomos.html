@@ -19,7 +19,7 @@
   <header>
     <!-- place navbar here -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <a class="navbar-brand" href="../html/index.html"><img src="../Imagenes/Logo.webp" alt="Logo" class="logoCabecera"></a>
+      <a class="navbar-brand" href="../html/index.html"><img src="../Imagenes/Logo.svg" alt="Logo" class="logoCabecera"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -68,7 +68,37 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-6 col-sm-12" > 
-          <img src="../Imagenes/FotoSalonArriba.jpg" alt="salon planta superior" class="img-fluid">
+          <picture>
+            <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+            <source srcset="../Imagenes/FotoSalonArribaP.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+            <source srcset="../Imagenes/FotoSalonArribaM.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+            <source srcset="../Imagenes/FotoSalonArribaG.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+            <source srcset="../Imagenes/FotoSalonArribaP.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+            <source srcset="../Imagenes/FotoSalonArribaM.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de densidad media y tamaño grande -->
+            <source srcset="../Imagenes/FotoSalonArribaG.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+            <source srcset="../Imagenes/FotoSalonArribaP.avif" media="(max-width: 575px) and (min-resolution: 2dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+            <source srcset="../Imagenes/FotoSalonArribaM.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)" class="img-fliud">
+          
+            <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+            <source srcset="../Imagenes/FotoSalonArribaG.avif" media="(min-width: 768px) and (min-resolution: 2dppx)" class="img-fliud">
+          
+            <!-- Imagen por defecto para otras condiciones -->
+            <img src="../Imagenes/FotoSalonArriba.jpg" alt="Descripción de la imagen">
+          </picture>
         </div>
       </div>
     </div>

@@ -84,24 +84,26 @@ function seleccionarImpares() {
 }
 
 //opciones de valdiacion de usuario
-function administrarUsuario(){
-    var usuarioIntroducido=document.getElementById("usuario").value;//accedemos mediante ID al usuario
-    var contraseñaIntroducida=document.getElementById("contraseña").value;//accedemos mediante ID a la contraseña
-    var contraseñaNueva="";//variable para almacenar la nueva contraseña
-    var usuario={//creamos el objeto usaurio
-        usuario:"alumno",//declaracion nombre usuario
-        contraseña:"bueno",//declaracion contraseña
-        cambiarContraseña(nuevaContraseña)//metodo cambio contraseña
-            {
-                this.contraseña=nuevaContraseña;//devolvemos la nueva contraseña
-            }   
+function administrarUsuario() {
+    var usuarioIntroducido = document.getElementById("usuario").value;
+    var contraseñaIntroducida = document.getElementById("contraseña").value;
+    var contraseñaNueva = "";
+
+    var usuario = {
+        nombre: "alumno",
+        contraseña: "bueno",
+        cambiarContraseña: function (nuevaContraseña) {
+            this.contraseña = nuevaContraseña;
         }
-    if (usuarioIntroducido===usuario.usuario && contraseñaIntroducida===usuario.contraseña) {//verificamos que ambos datos esten correctos
-        document.getElementById("mensajes").innerHTML="Datos correctos¿Deseas cambiar la contraseña?";//mostramos un mensaje 
-        contraseñaNueva=prompt("Introduce la nueva contraseña");//pedimos la contraseña 
-        usuario.cambiarContraseña(contraseñaNueva);//actualizamos por el metodo del objeto
+    };
+
+    if (usuarioIntroducido === usuario.nombre && contraseñaIntroducida === usuario.contraseña) {
+        document.getElementById("mensajes").innerHTML = "Datos correctos. ¿Deseas cambiar la contraseña?";
+        contraseñaNueva = prompt("Introduce la nueva contraseña");
+        usuario.cambiarContraseña(contraseñaNueva);
     } else {
-        document.getElementById("mensajes").innerHTML="Datos incorrectos¿Quieres intentarlo de nuevo?";//mostramos msj si no es correcta
+        document.getElementById("mensajes").innerHTML = "Datos incorrectos. ¿Quieres intentarlo de nuevo?";
     }
 }
+
 
