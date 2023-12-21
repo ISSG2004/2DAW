@@ -3,8 +3,8 @@ setlocal enabledelayedexpansion
 
 
 REM Carpeta de entrada y salida
-set "input_folder=C:\Users\1Daw\Documents\2DAW\2Daw\DiseñoInterfaces\PracticaImagenesAdaptativas\Imagenes"
-set "output_folder=C:\Users\1Daw\Documents\2DAW\2Daw\DiseñoInterfaces\PracticaImagenesAdaptativas\ImagenesConvertidas"
+set input_folder="C:\Users\1Daw\Documents\2DAW\2Daw\DiseñoInterfaces\PracticaImagenesAdaptativas\Imagenes"
+set output_folder="C:\Users\1Daw\Documents\2DAW\2Daw\DiseñoInterfaces\PracticaImagenesAdaptativas\ImagenesConvertidas"
 
 
 REM Verificar si la carpeta de salida existe, si no, crearla
