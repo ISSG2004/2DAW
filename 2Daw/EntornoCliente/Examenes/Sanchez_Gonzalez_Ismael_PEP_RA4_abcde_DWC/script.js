@@ -1,3 +1,13 @@
+//declaramos objeto
+var usuario = {
+    nombre: "alumno",
+    contraseña: "bueno",
+    hora:"",
+    cambiarContraseña: function (nuevaContraseña) {
+        this.contraseña = nuevaContraseña;
+    }
+};
+
 //declaramos las variables de las ventanas
 var ventana1="";ventana2="";ventana3="";ventana4="";
 function funcionalidadVentana1() {//metodo para operar en la ventana1
@@ -37,6 +47,7 @@ function funcionalidadVentana4(){//ventana4
     ventana4 = window.open('', 'Ventana4', 'height=300,width=300');//creamos la ventana
     ventana4.document.bgColor='orange';//color de fondo
     ventana4.moveTo(0,1080);//posicion de la ventana
+    ventana4.document.write("<p>Contraseña nueva: "+usuario.contraseña+"</p><br><p>Hora del cambio: "+usuario.hora+" </p>")
 }
 //cerrar ventana4
 closeVentana4.addEventListener('click', cerrarVentana4);//Creamos evento para que cuando se haga click en el boton se cierre
@@ -73,13 +84,16 @@ function listaRecortada() {
 }
 //metodo para coger los numeros impares
 function seleccionarImpares() {
-    var listadoImpar=[];//creamos un segundo array para almacenar impares
-    for (let i = 0; i < listaRecortada().length; i++) {
-        if (listaRecortada()[i]%2!==0) {//condicion para sacar impares
-            listadoImpar.push(listaRecortada()[i]);//añadimos al array auxiliar los impares
+    var listadoImpar = []; // creamos un segundo array para almacenar impares
+    var listaRecortadaArray = listaRecortada(); // almacenamos el resultado de listaRecortada() en una variable
+    for (let i = 0; i < listaRecortadaArray.length; i++) {
+        if (listaRecortadaArray[i] % 2 !== 0) { // condicion para sacar impares
+            listadoImpar.push(listaRecortadaArray[i]); // añadimos al array auxiliar los impares
         }
     }
-    listadoImpar.sort();//ordenamos el array de menor a mayor
+    listadoImpar.sort(function(a, b) {
+        return a - b;
+    });//ordenamos el array de menor a mayor
     return listadoImpar;//devolvemos el segundo array
 }
 
@@ -88,19 +102,11 @@ function administrarUsuario() {
     var usuarioIntroducido = document.getElementById("usuario").value;
     var contraseñaIntroducida = document.getElementById("contraseña").value;
     var contraseñaNueva = "";
-
-    var usuario = {
-        nombre: "alumno",
-        contraseña: "bueno",
-        cambiarContraseña: function (nuevaContraseña) {
-            this.contraseña = nuevaContraseña;
-        }
-    };
-
     if (usuarioIntroducido === usuario.nombre && contraseñaIntroducida === usuario.contraseña) {
         document.getElementById("mensajes").innerHTML = "Datos correctos. ¿Deseas cambiar la contraseña?";
         contraseñaNueva = prompt("Introduce la nueva contraseña");
         usuario.cambiarContraseña(contraseñaNueva);
+        usuario.hora=new Date();
     } else {
         document.getElementById("mensajes").innerHTML = "Datos incorrectos. ¿Quieres intentarlo de nuevo?";
     }
