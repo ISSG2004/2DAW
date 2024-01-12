@@ -5,6 +5,9 @@ var usuario = {
     hora:"",
     cambiarContraseña: function (nuevaContraseña) {
         this.contraseña = nuevaContraseña;
+    },
+    actualizarHora: function (){
+        this.hora=new Date;
     }
 };
 
@@ -47,7 +50,11 @@ function funcionalidadVentana4(){//ventana4
     ventana4 = window.open('', 'Ventana4', 'height=300,width=300');//creamos la ventana
     ventana4.document.bgColor='orange';//color de fondo
     ventana4.moveTo(0,1080);//posicion de la ventana
-    ventana4.document.write("<p>Contraseña nueva: "+usuario.contraseña+"</p><br><p>Hora del cambio: "+usuario.hora+" </p>")
+    if (usuario.hora=="") {
+        ventana4.document.write("No se puede mostrar nada ya que no se cambio la contraseña");
+    } else {
+        ventana4.document.write("<p>Contraseña nueva: "+usuario.contraseña+"</p><br><p>Hora del cambio: "+usuario.hora+" </p>")
+    }
 }
 //cerrar ventana4
 closeVentana4.addEventListener('click', cerrarVentana4);//Creamos evento para que cuando se haga click en el boton se cierre
@@ -102,11 +109,19 @@ function administrarUsuario() {
     var usuarioIntroducido = document.getElementById("usuario").value;
     var contraseñaIntroducida = document.getElementById("contraseña").value;
     var contraseñaNueva = "";
+    var mensaj=document.getElementById("mensaje");
+    try {
+        if (contraseñaIntroducida=="") {
+            throw"No has introducido contraseña";
+        }
+    } catch (err) {
+        mensaj.innerHTML="<h1>"+err+"</h1>";
+    }
     if (usuarioIntroducido === usuario.nombre && contraseñaIntroducida === usuario.contraseña) {
         document.getElementById("mensajes").innerHTML = "Datos correctos. ¿Deseas cambiar la contraseña?";
         contraseñaNueva = prompt("Introduce la nueva contraseña");
         usuario.cambiarContraseña(contraseñaNueva);
-        usuario.hora=new Date();
+        usuario.actualizarHora();
     } else {
         document.getElementById("mensajes").innerHTML = "Datos incorrectos. ¿Quieres intentarlo de nuevo?";
     }
