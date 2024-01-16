@@ -12,7 +12,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="../CSS/main.css">
   <link rel="stylesheet" href="../CSS/pizzeria.css">
-  <link rel="shortcut icon" href="../Imagenes/Logo.svg">
+  <link rel="shortcut icon" href="../Imagenes/Logo.png" >
 </head>
 
 <body>
@@ -115,7 +115,37 @@
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12">
           <div id="imagenPizzaTime">
-            <img src="../Imagenes/ImagenPizzeria.webp" alt="imagen pizza pagina" class="img-fluid">
+            <picture>
+              <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+            
+              <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+            
+              <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+            
+              <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+            
+              <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+            
+              <!-- Imagen para pantallas de densidad media y tamaño grande -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+            
+              <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+            
+              <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+            
+              <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+              <source class="img-fluid" srcset="../Imagenes/ImagenPizzeria-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+            
+              <!-- Imagen por defecto para otras condiciones -->
+              <img class="img-fluid " src="../Imagenes/TarrinaHelado-normal.jpg" alt="imagen pizza time">
+            </picture>
           </div>
           <div id="carouselId" class="carousel slide carruselKebab" data-bs-ride="carousel">
             <ol class="carousel-indicators">
@@ -126,13 +156,103 @@
             </ol>
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
-                <img src="../Imagenes/KebabAngelo.webp" class="w-100 d-block" alt="First slide">
+                <picture>
+                  <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                  <source class="img-fluid " srcset="../Imagenes/KebabAngelo-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/KebabAngelo-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                  <source class="img-fluid" srcset="../Imagenes/KebabAngelo-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                  <source class="img-fluid" srcset="../Imagenes/KebabAngelo-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/KebabAngelo-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                  <source class="img-fluid" srcset="../Imagenes/KebabAngelo-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                  <source class="img-fluid" srcset="../Imagenes/KebabAngelo-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/KebabAngelo-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                  <source class="img-fluid " srcset="../Imagenes/KebabAngelo-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen por defecto para otras condiciones -->
+                  <img class="img-fluid d-block w-100 img-fluid float-start carousel" src="../Imagenes/KebabAngelo-normal.jpg" alt="Primera imagen carrusel pizzeria">
+                </picture>
               </div>
               <div class="carousel-item">
-                <img src="../Imagenes/Kebab2.webp" class="w-100 d-block" alt="Second slide">
+                <picture>
+                  <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                  <source class="img-fluid " srcset="../Imagenes/Kebab2-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab2-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab2-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab2-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab2-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab2-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab2-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab2-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                  <source class="img-fluid " srcset="../Imagenes/Kebab2-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen por defecto para otras condiciones -->
+                  <img class="img-fluid d-block w-100 img-fluid float-start carousel" src="../Imagenes/Kebab2-normal.jpg" alt="segunda imagen carrusel pizzeria">
+                </picture>
               </div>
               <div class="carousel-item">
-                <img src="../Imagenes/Kebab3.webp" class="w-100 d-block" alt="Third slide">
+                <picture>
+                  <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                  <source class="img-fluid " srcset="../Imagenes/Kebab3-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab3-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab3-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab3-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab3-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab3-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab3-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                  <source class="img-fluid" srcset="../Imagenes/Kebab3-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                  <source class="img-fluid " srcset="../Imagenes/Kebab3-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+                
+                  <!-- Imagen por defecto para otras condiciones -->
+                  <img class="img-fluid d-block w-100 img-fluid float-start carousel" src="../Imagenes/Kebab3-normal.jpg" alt="tercera imagen carrusel pizzeria">
+                </picture>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">

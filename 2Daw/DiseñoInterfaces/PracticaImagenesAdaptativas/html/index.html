@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="../CSS/main.css">
-  <link rel="shortcut icon" href="../Imagenes/Logo.svg" >
+  <link rel="shortcut icon" href="../Imagenes/Logo.png" >
   <link rel="stylesheet" href="../CSS/paginaInicio.css">
 </head>
 
@@ -47,7 +47,17 @@
       <div class="row">
         <div class="col-lg-6 contImagenPortada">
           <!-- Crea una columna que ocupa la mitad del espacio en pantallas medianas o mayores -->
-          <img src="../Imagenes/ImagenPortada.webp" alt="Imagen mural" class="float-end imagenPortada">
+          <picture>
+            <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+            <source class="img-fluid float-end imagenPortada" srcset="../Imagenes/ImagenPortada-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+            <!-- Imagen para pantallas de densidad media y tamaño grande -->
+            <source class="img-fluid float-end imagenPortada" srcset="../Imagenes/ImagenPortada-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+            <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+            <source class="img-fluid float-end imagenPortada" srcset="../Imagenes/ImagenPortada-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+          
+            <!-- Imagen por defecto para otras condiciones -->
+            <img class="img-fluid float-end imagenPortada" src="../Imagenes/ImagenPortada-normal.jpg" alt="imagen portada mural">
+          </picture>
         </div>
         <!--Inicio slideshow-->
         <div id="carouselExampleCaptions" class="col-lg-6 col-md-12 col-sm-12  carousel slide  mx-auto d-block ">
@@ -61,22 +71,109 @@
           </div>
           <div class="carousel-inner"><!--Contenedor slideshow-->
             <div class="carousel-item active">
-              <img src="../Imagenes/HamburgueseriaPaginaPrincipal2.webp"
-                class=" d-block w-100 img-fluid float-start carousel" alt="...">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid " srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid " srcset="../Imagenes/HamburgueseriaPaginaPrincipal2-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid d-block w-100 img-fluid float-start carousel" src="../Imagenes/HamburgueseriaPaginaPrincipal2-normal.jpg" alt="Hamburguesa slideshow">
+              </picture>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Hamburguesería</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="../Imagenes/PizzeriaPaginaPrincipal.webp" class="d-block w-100 img-fluid float-start carousel"
-                alt="...">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid " srcset="../Imagenes/PizzeriaPaginaPrincipal-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid " srcset="../Imagenes/PizzeriaPaginaPrincipal-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid d-block w-100 img-fluid float-start carousel" src="../Imagenes/PizzeriaPaginaPrincipal-normal.jpg" alt="Pizza slideshow">
+              </picture>
               <div class="carousel-caption d-none d-md-block">
                 <h5> Pizzeria</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="../Imagenes/HeladeriaPaginaPrincipal.webp" class="d-block w-100 img-fluid float-start carousel"
-                alt="...">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid " srcset="../Imagenes/HeladeriaPaginaPrincipal-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HeladeriaPaginaPrincipal-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/HeladeriaPaginaPrincipal-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/HeladeriaPaginaPrincipal-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HeladeriaPaginaPrincipal-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/HeladeriaPaginaPrincipal-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/HeladeriaPaginaPrincipal-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HeladeriaPaginaPrincipal-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid " srcset="../Imagenes/HeladeriaPaginaPrincipal-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid d-block w-100 img-fluid float-start carousel" src="../Imagenes/HeladeriaPaginaPrincipal-normal.jpg" alt="helado slidesho">
+              </picture>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Heladeria</h5>
               </div>
@@ -126,7 +223,37 @@
           <br>
         </article>
         <article class="col-12">
-          <img src="../Imagenes/IconoReparto.webp" class="mx-auto d-block imagenReparto" alt="Imagen Repartos">
+          <picture>
+            <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+          
+            <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+          
+            <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+          
+            <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+          
+            <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+          
+            <!-- Imagen para pantallas de densidad media y tamaño grande -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+          
+            <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+          
+            <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+          
+            <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+            <source class="img-fluid mx-auto d-block imagenReparto" srcset="../Imagenes/IconoReparto-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+          
+            <!-- Imagen por defecto para otras condiciones -->
+            <img class="img-fluid mx-auto d-block imagenReparto" src="../Imagenes/IconoReparto-normal.jpg" alt="Imagen con informacion para pedidos a domicilio">
+          </picture>
           <div class="centrado">
             <a class="btn_azul" href="../documentos/cartaangelo.pdf" target="_blank" title="Carta completa Angelo">CARTA
               COMPLETA</a>

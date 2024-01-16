@@ -11,11 +11,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="../CSS/main.css">
-  <link rel="shortcut icon" href="../Imagenes/Logo.svg">
+  <link rel="shortcut icon" href="../Imagenes/Logo.png">
   <link rel="stylesheet" href="../CSS/paginaInicio.css">
   <link rel="stylesheet" href="../CSS/galeria.css">
 </head>
-
 <body>
   <header>
     <!-- place navbar here -->
@@ -53,7 +52,37 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <img src="../Imagenes/HamburguesaGaleria.webp" alt="HamburguesaGaleria" class="img-fluid">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/HamburguesaGaleriaG-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid" src="../Imagenes/HamburguesaGaleriaG-normal.jpg" alt="Imagen hamburguesa galeria">
+              </picture>
               <h2>Hamburguesa completa</h2>
               <p>Carne de cerdo, cebolla, lechuga, tomate, huevo plancha, queso, jamon cocido, bacon</p>
             </div>
@@ -62,7 +91,37 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <img src="../Imagenes/patatasEspeciales.webp" alt="PatatasGaleria" class="img-fluid">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/patatasEspeciales-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid" src="../Imagenes/patatasEspeciales-normal.jpg" alt="imagen patatas queso bacon">
+              </picture>
               <h2>Patatas queso y bacon</h2>
               <p>Patatas fritas, queso, bacon, salsa ranchera</p>
             </div>
@@ -71,7 +130,37 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <img src="../Imagenes/PerritoGaleria.webp" alt="perritoGaleria" class="img-fluid">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PerritoGaleria-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid" src="../Imagenes/PerritoGaleria-normal.jpg" alt="Imagen de perrito caliente">
+              </picture>
               <h2>Perrito angelo</h2>
               <p>Salchichas, cebolla, tomate, bacon, queso</p>
             </div>
@@ -80,7 +169,37 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <img src="../Imagenes/PlatoCombinado.webp" alt="PlatoCombinado" class="img-fluid">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PlatoCombinado-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid" src="../Imagenes/PlatoCombinado-normal.jpg" alt="Imagen plato combinado">
+              </picture>
               <h2>Combinado N1</h2>
               <p>Huevo, lomo, croquetas, patatas fritas, ensalada</p>
             </div>
@@ -93,7 +212,37 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <img src="../Imagenes/KebabAngelo.webp" alt="KebabGaleria" class="img-fluid ">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/KebabAngelo-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid" src="../Imagenes/KebabAngelo-normal.jpg" alt="Imagen kebab">
+              </picture>
               <h2>Kebab de pollo</h2>
               <p>Carne de pollo, gratinado de queso, ensalada, salsa pomodoro, salsa de yogúr</p>
             </div>
@@ -102,7 +251,37 @@
         <div class="col-lg-3 col-md-6 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <img src="../Imagenes/PizzeriaPaginaPrincipal.webp" alt="PizzaGaleria" class="img-fluid ">
+              <picture>
+                <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-50.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-75.jpg" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-normal.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-50.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-75.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de densidad media y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-normal.webp" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-50.avif" media="(max-width: 575px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-75.avif" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+                <source class="img-fluid" srcset="../Imagenes/PizzeriaPaginaPrincipal-normal.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+              
+                <!-- Imagen por defecto para otras condiciones -->
+                <img class="img-fluid" src="../Imagenes/PizzeriaPaginaPrincipal-normal.jpg" alt="Imagen pizzeria">
+              </picture>
               <h2>Pizza caprichosa</h2>
               <p>Tomate, mozzarella, atún, jamón york, alcachofas, aceitunas negras </p>
             </div>

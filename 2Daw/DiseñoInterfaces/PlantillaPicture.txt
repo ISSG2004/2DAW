@@ -1,0 +1,32 @@
+
+<picture>
+  <!-- Imagen para pantallas de baja densidad y tamaño pequeño -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaP.jpg" media="(max-width: 575px) and (max-resolution: 1dppx)">
+
+  <!-- Imagen para pantallas de baja densidad y tamaño mediano -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaM.webp" media="(min-width: 576px) and (max-width: 767px) and (max-resolution: 1dppx)">
+
+  <!-- Imagen para pantallas de baja densidad y tamaño grande -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaG.jpg" media="(min-width: 768px) and (max-resolution: 1dppx)">
+
+  <!-- Imagen para pantallas de densidad media y tamaño pequeño -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaP.webp" media="(max-width: 575px) and (min-resolution: 1.5dppx)">
+
+  <!-- Imagen para pantallas de densidad media y tamaño mediano -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaM.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 1.5dppx)">
+
+  <!-- Imagen para pantallas de densidad media y tamaño grande -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaG.avif" media="(min-width: 768px) and (min-resolution: 1.5dppx)">
+
+  <!-- Imagen para pantallas de alta densidad y tamaño pequeño -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaP.jpg" media="(max-width: 575px) and (min-resolution: 2dppx)">
+
+  <!-- Imagen para pantallas de alta densidad y tamaño mediano -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaM.webp" media="(min-width: 576px) and (max-width: 767px) and (min-resolution: 2dppx)">
+
+  <!-- Imagen para pantallas de alta densidad y tamaño grande -->
+  <source class="img-fluid" srcset="../Imagenes/FotoSalonArribaG.avif" media="(min-width: 768px) and (min-resolution: 2dppx)">
+
+  <!-- Imagen por defecto para otras condiciones -->
+  <img class="img-fluid" src="../Imagenes/FotoSalonArriba.jpg" alt="Descripción de la imagen">
+</picture>
