@@ -8,16 +8,17 @@
 <body>
     <ul>
         <?php
-            if (isset($_POST['enviar'])){
+            if (isset($_REQUEST['enviar'])){
                 echo"<li>Texto en búsqueda: ".$_REQUEST["TxtBusq"]."</li>";
                 echo"<li>Buscar en: ".$_REQUEST["DondeBuscar"]."</li>";
                 echo"<li>Género : ".$_REQUEST["Genero"]."</li>";
-            }else{}
+                echo"[<a href='./Ejercicio3.php'>Realizar otra búsqueda</a>]";
+            }else{
         ?>
     </ul>
     <h1>Formulario simple</h1>
     <h2>Búsqueda de canciones</h2>
-    <form action="Ejercicio1.php" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <fieldset>
         <label for="TxtBusq">Texto a buscar</label>
         <input type="text" name="TxtBusq" >
@@ -47,5 +48,8 @@
         <button type="submit" name="enviar">Buscar</button>
         </fieldset>
     </form>
+    <?php
+        }
+    ?>
 </body>
 </html>
