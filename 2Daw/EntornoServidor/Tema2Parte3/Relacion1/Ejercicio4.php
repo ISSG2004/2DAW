@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+    <?php  
         if (isset($_REQUEST["insertar"])) {
             echo"<h1>Resultado de la inserción de nueva noticia</h1>";
             if (empty($_REQUEST["titulo"]) || empty($_REQUEST["texto"])) {
@@ -20,7 +20,9 @@
                 echo"</ul>";
                 echo"[<a href='./Ejercicio4.php'>Volver</a>]";  
             }else{
-                echo"La noticia ha sido recibida correctamente: <ul><li>Titulo: ".$_REQUEST["titulo"]."</li><li>"."Texto: ".$_REQUEST["texto"]."</li><li></li></ul>";
+                $nombreImagen= $_FILES["imagen"]["name"];
+                move_uploaded_file($_FILES["imagen"]["tmp_name"], "./Ficheros/".$nombreImagen."/");
+                echo "La noticia ha sido recibida correctamente: <ul><li>Titulo: " . $_REQUEST["titulo"] . "</li><li>Texto: " . $_REQUEST["texto"] . "</li><li>Categoria: " . $_REQUEST["categoria"] . "</li><li>Imagen: <a href='./Ficheros/" . $nombreImagen . "' target='_blank'>" . $_FILES["imagen"]["name"] . "</a></li></ul>";
             }
         }else{
     ?>
