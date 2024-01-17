@@ -35,7 +35,7 @@
         </select>
         <br>
         <br>
-        <button type="submit">Buscar</button>
+        <button type="submit" name="buscar">Buscar</button>
         </fieldset>
     </form>
 </body>

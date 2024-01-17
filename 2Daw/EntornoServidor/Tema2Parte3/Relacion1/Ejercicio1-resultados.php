@@ -10,9 +10,12 @@
     <p>Estos son los datos introducidos</p>
     <ul>
     <?php
-        echo"<li>Texto en búsqueda: ".$_REQUEST["TxtBusq"]."</li>";
-        echo"<li>Buscar en: ".$_REQUEST["DondeBuscar"]."</li>";
-        echo"<li>Género : ".$_REQUEST["Genero"]."</li>";
+        if (isset($_REQUEST['buscar'])) {
+            echo"<li>Texto en búsqueda: ".$_REQUEST["TxtBusq"]."</li>";
+            echo"<li>Buscar en: ".$_REQUEST["DondeBuscar"]."</li>";
+            echo"<li>Género : ".$_REQUEST["Genero"]."</li>";
+        }
+        
     ?>
     </ul>
     <a href="Ejercicio1.php">[Nueva búsqueda]</a>
