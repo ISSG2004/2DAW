@@ -1,0 +1,107 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
+    Atributos que se aplican a todos los tamaños
+*/
+:root{/*Variables para los colores*/
+    --color-principal:#212529;
+    --color-secundario:#a4a5a6;
+}
+main{/*Centrar contenido del main*/
+   margin: 0 auto;
+   background-color:#fdf6e7;
+
+}
+.espaciarElementos{/*Clase creada para espaciar elementos*/
+    padding: 20px;
+}
+.centrado{/*Clase creada para centrar elementos*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;    
+
+}
+footer{
+    padding: 3px;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 38px;
+}
+p{
+    font-size: 25px;
+}
+nav div ul, footer div ul{/*Eliminar el punto icono de la lista*/
+    list-style-type: none;
+
+}
+ul li a{/*Eliminar underline de los enlaces*/
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+a:hover{
+    color: var(--color-secundario);
+}
+
+ul li a:visited{/*Eliminar el visited de los enlaces*/
+    color: var(--color-secundario);
+}
+h2~p{
+    color: var(--color-principal);
+}
+/*Clase para imagen logo header*/
+.logoCabecera{
+    height: 100px;
+    width: 120px;
+}
+@media(min-width:768px){/*
+    Breakpoint para dispositivos medianos
+*/
+    footer div ul li{
+        padding: 5px;
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+@media(min-width:992px){/*
+        Breakpoint para dispositivos grandes
+    */
+    footer div ul li{
+        padding: 10px;
+    }
+    footer{
+        padding:20px ;
+        
+    }
+    h2{
+        text-align: left;
+        font-size: 23px;
+    }
+    p{
+        font-size: 15px;
+    }
+
+}
+
+
