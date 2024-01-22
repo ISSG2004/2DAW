@@ -1,0 +1,68 @@
+<!--
+Enunciado del ejercicio:
+
+Completa el siguiente código con una función en javascript que me permita leer el 
+grosor del borde de la tabla mediante un boton.
+-->
+<html>
+   <head>
+      <title>
+         P&aacute;gina con Javascript.
+      </title>
+      <script>
+         function leerGrosorBorde() {
+             // Obtener el elemento de la tabla
+            var tabla = document.getElementById("tabla1");
+             // Obtener el grosor del borde de la tabla
+            var grosorBorde = tabla.border;
+             // Mostrar el resultado (puedes hacer lo que quieras con el valor)
+            alert("El grosor del borde de la tabla es: " + grosorBorde);
+         }
+      </script>
+   </head>
+   <body>
+
+      <table width="300" align="left" id="tabla1" border="2">
+         <tr height="100">
+            <td width="100" align="center">
+               Celda 1
+            </td>
+            <td width="100" align="center">
+               Celda 2
+            </td>
+            <td width="100" align="center">
+               Celda 3
+            </td>
+         </tr>
+         <tr height="100">
+            <td align="center">
+               Celda 4
+            </td>
+            <td align="center">
+               Celda 5
+            </td>
+            <td align="center">
+               Celda 6
+            </td>
+         </tr>
+         <tr height="100">
+            <td align="center">
+               Celda 7
+            </td>
+            <td align="center">
+               Celda 8
+            </td>
+            <td align="center">
+               Celda 9
+            </td>
+         </tr>
+      </table>
+      <button type="button" onclick="leerGrosorBorde()">leer ancho</button>
+
+      <p>
+      </p>
+
+      
+
+   </body>
+</html>

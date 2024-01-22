@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre">
+    <br>
+    <br>
+    <label for="apellidos">Apellidos: </label>
+    <input type="text" id="apellidos">
+    <br>
+    <br>
+    <label for="email">Email: </label>
+    <input type="email" id="mail">
+    <br>
+    <br>
+    <label for="telefono">Telefono: </label>
+    <input type="text" id="phone">
+    <button type="submit" onclick="validar()">Enviar</button>
+    <br>
+    <br>
+    <div id="errores"></div>
+    <script>
+        function validar() {
+            var nombreValor = document.getElementById("nombre").value;
+            var apellidosValor = document.getElementById("apellidos").value;
+            var mailValor=document.getElementById("mail").value;
+            var phone=document.getElementById("phone").value;
+            var erroresElemento = document.getElementById("errores");
+            // Lógica de validación (puedes personalizar según tus necesidades)
+            var mensajeError = "";  
+            if (nombreValor.trim() === "") {
+                mensajeError += "El nombre no puede estar vacío.<br>";
+            }
+            if (apellidosValor.trim() === "") {
+                mensajeError += "Los apellidos no pueden estar vacíos.";
+            }
+            if (mailValor.trim()==="") {
+                mensajeError += "El mail no puede estar vacío";
+            }
+            if (phone.trim()==="") {
+                mensajeError +="El telefono no puede estar vacío"
+            }
+            erroresElemento.innerHTML = mensajeError;
+            if (mensajeError === "") {
+                
+                alert("Validación exitosa");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre">
+    <br>
+    <br>
+    <label for="apellidos">Apellidos: </label>
+    <input type="text" id="apellidos">
+    <br>
+    <br>
+    <button type="submit" onclick="validar()">Enviar</button>
+    <br>
+    <br>
+    <div id="errores"></div>
+    <script>
+        function validar() {
+            var nombreValor = document.getElementById("nombre").value;
+            var apellidosValor = document.getElementById("apellidos").value;
+            var erroresElemento = document.getElementById("errores");
+
+            // Lógica de validación (puedes personalizar según tus necesidades)
+            var mensajeError = "";
+            
+            if (nombreValor.trim() === "") {
+                mensajeError += "El nombre no puede estar vacío.<br>";
+            }
+
+            if (apellidosValor.trim() === "") {
+                mensajeError += "Los apellidos no pueden estar vacíos.";
+            }
+
+            erroresElemento.innerHTML = mensajeError;
+
+            // Puedes realizar otras acciones si la validación es exitosa
+            if (mensajeError === "") {
+                // Código adicional si la validación es exitosa
+                alert("Validación exitosa");
+            }
+        }
+    </script>
+</body>
+</html>

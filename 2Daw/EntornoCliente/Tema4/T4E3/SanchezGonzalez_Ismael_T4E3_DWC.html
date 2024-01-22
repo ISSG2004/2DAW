@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Página con Javascript</title>
+   <script language="javascript">
+      var nodoImagen; // Variable global para el nodo de la imagen
+
+      function crearNodo() {
+         nodoImagen = document.getElementById("imagen");
+      }
+
+      function agregar() {
+         var nuevaDescripcion = prompt("Ingrese la nueva descripción:");
+         if (nuevaDescripcion !== null) {
+            nodoImagen.setAttribute("title", nuevaDescripcion);
+         }
+      }
+
+      function eliminar() {
+         nodoImagen.removeAttribute("title");
+      }
+
+      function cambiarDescripcion() {
+         var nuevaDescripcion = prompt("Ingrese la nueva descripción:");
+         if (nuevaDescripcion !== null) {
+            nodoImagen.setAttribute("title", nuevaDescripcion);
+         }
+      }
+
+      // Función para mostrar la descripción al pasar el ratón por encima de la imagen
+      function mostrarDescripcion() {
+         var descripcion = nodoImagen.getAttribute("title");
+         alert("Descripción: " + (descripcion || "No hay descripción"));
+      }
+   </script>
+</head>
+
+<body onLoad="crearNodo();">
+   <img id="imagen"
+      src="https://educacionadistancia.juntadeandalucia.es/centros/almeria/pluginfile.php/262792/mod_assign/introattachment/0/imagenes/iceberg.jpg"
+      onmouseover="mostrarDescripcion()">
+   <br>
+   <form>
+      <input type="button" value="Agregar/Modificar Descripción" onClick="cambiarDescripcion();">
+      <br>
+      <input type="button" value="Eliminar Descripción" onClick="eliminar();">
+   </form>
+</body>
+
+</html>
