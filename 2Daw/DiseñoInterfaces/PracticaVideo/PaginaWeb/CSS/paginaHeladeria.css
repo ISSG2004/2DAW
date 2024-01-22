@@ -1,0 +1,28 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root{/*Variables para los colores*/
+    --color-principal:#212529;
+    --color-secundario:#a4a5a6;
+    --color-boton:#0095DA;
+    --texto-boton:#fff;
+}
+
+iframe{
+    height: 700px;
+    width: 50%;
+}
+img{
+    border-radius: 15px;
+}
+@media(min-width:768px){
+    
+}
+
+@media(min-width:992px){
+    
+}
