@@ -1,0 +1,8 @@
+header{
+    min-height: 45vh;
+}
+main{
+    background-color:#0f1a20;
+    min-height: 55vh;
+    color: white;
+}
