@@ -1,6 +1,15 @@
 @import "../bootstrap/scss/bootstrap";
 
-.navbar{
-    background-color: #f42c04;
-    min-height: 10vh;//eliminar esta linea
+.nav-link{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.nav-item {
+    padding: 20px;
+}
+.nav-link:hover{
+    color: white;
+    border-bottom: #f42c04 1px solid;
+    
 }

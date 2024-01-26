@@ -14,14 +14,15 @@
         <link rel="stylesheet" href="../css/custom.css">
         <link rel="stylesheet" href="../css/main.css">
         <!-- FaviCon -->
+        <link rel="shortcut icon" href="../Imágenes/logo_portfolio.png" type="image/x-icon">
     </head>
 
     <body>
         <header>
             <!-- place navbar here -->
             <nav class="navbar navbar-expand-sm ">
-                <div class="container">
-                    <a class="navbar-brand" href="#">logo</a>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="../Imágenes/logo_portfolio.png" alt="logo_web" class="logo"></a>
                     <button
                         class="navbar-toggler d-lg-none"
                         type="button"
@@ -36,33 +37,46 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavId">
                         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" aria-current="page"
-                                    >Home
-                                    <span class="visually-hidden">(current)</span></a
-                                >
+                                <a class="nav-link" href="#">Sobre mí</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">Formación y experiencia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contactar</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            
-            <!--Información de cabecera-->
+            <!--content cabecera-->
+            <div class="row">
+                <div class="col-3">&NonBreakingSpace;</div>
+                <div class="col-6 textoPaginaPrincp">
+                    <p>"Bienvenidos a mi mundo digital. Soy Ismael Sánchez, un desarrollador web apasionado. En este portfolio, les invito a explorar mi experiencia y enfoque innovador en el fascinante universo del desarrollo web".</p>
+                    <button class="contacto">Contactar</button>
+                </div>
+                <div class="col-3">&NonBreakingSpace;</div>
+            </div>
         </header>
+        <!--Cuerpo de la web-->
         <main class="container-fluid">
-            <section class="row">
-                <article class="col-3">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ratione quia cupiditate voluptatem eum esse voluptates distinctio blanditiis quidem unde minus delectus ex quod eos, neque, tempore ipsam repudiandae accusamus!
-                </article>
-                <article class="col-6">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nemo incidunt exercitationem minima, nulla dignissimos inventore animi id molestiae sunt. Facere, aliquam ullam dignissimos possimus reprehenderit tempora cum a ipsum?
-                </article>
-                <article class="col-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam inventore quod blanditiis ad! Tenetur autem asperiores commodi in ut sequi sit! Amet at ullam vitae itaque? Eaque, amet quia.
-                </article>
-            </section>
+            <div class="container-md">
+                <section class="row">
+                    <article class="col-lg-4 col-md-6 col-sm-12">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ratione quia cupiditate voluptatem eum esse voluptates distinctio blanditiis quidem unde minus delectus ex quod eos, neque, tempore ipsam repudiandae accusamus!
+                    </article>
+                    <article class="col-lg-4 col-md-6 col-sm-12">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nemo incidunt exercitationem minima, nulla dignissimos inventore animi id molestiae sunt. Facere, aliquam ullam dignissimos possimus reprehenderit tempora cum a ipsum?
+                    </article>
+                    <article class="col-lg-4 col-md-6 col-sm-12">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam inventore quod blanditiis ad! Tenetur autem asperiores commodi in ut sequi sit! Amet at ullam vitae itaque? Eaque, amet quia.
+                    </article>
+                </section>
+            </div>
         </main>
         <footer>
             <!-- place footer here -->

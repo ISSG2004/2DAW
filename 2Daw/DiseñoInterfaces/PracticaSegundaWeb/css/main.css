@@ -1,8 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 header{
-    min-height: 45vh;
+    background-image: url(../Imágenes/Imagen\ header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 55vh;
+    width: 100%;
+    color: white;
+    
+}
+nav{
+    position: fixed;
+}
+
+/*Texto cabecera*/
+.textoPaginaPrincp{
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+/*Boton contactar*/
+.contacto{
+    background-color: #0f1a2093;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: #0f1a20 2px solid;
+    border-radius: 15px;
+    margin-bottom: 10%;
+}
+.contacto:hover{
+    transform: scale(110%);
+    box-shadow: 0 4px 8px 0 #f42c04, 0 6px 20px
 }
 main{
+    height: 100vh;
+    padding: 20px;
     background-color:#0f1a20;
-    min-height: 55vh;
     color: white;
+}
+article{
+    padding :20px;
+}
+/*Ajustes logo*/
+.logo{
+    height: 75px;
+    width: auto;
+    margin: 20px;
+}
+.logo:hover{
+    transform: scale(110%);
 }
