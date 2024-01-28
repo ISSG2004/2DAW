@@ -2,28 +2,31 @@
     padding: 0;
     margin: 0;
 }
-header{
-    background-image: url(../Imágenes/Imagen\ header.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    min-height: 55vh;
-    width: 100%;
-    color: white;
-    
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
-nav{
-    position: fixed;
-}
+/*menú*/
 
 /*Texto cabecera*/
+.textoPaginaPrincp > h1{
+    font-size: 25px;
+}
 .textoPaginaPrincp{
-    margin-top: 20px;
     font-weight: bold;
     text-align: center;
     font-size: 25px;
 }
 /*Boton contactar*/
+header{
+    background-image: url(../Imágenes/Imagen\ header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 45vh;
+    color: rgb(255, 255, 255);
+    
+}
 .contacto{
     background-color: #0f1a2093;
     color: white;
@@ -31,20 +34,36 @@ nav{
     padding: 10px;
     border: #0f1a20 2px solid;
     border-radius: 15px;
-    margin-bottom: 10%;
+    margin-bottom: 30%;
 }
 .contacto:hover{
     transform: scale(110%);
     box-shadow: 0 4px 8px 0 #f42c04, 0 6px 20px
 }
+/*Estilos relacionados con el main*/
 main{
-    height: 100vh;
     padding: 20px;
-    background-color:#0f1a20;
     color: white;
+    background-color: #25273e;
 }
-article{
-    padding :20px;
+/*Destrezas */
+
+h2{
+    text-align: center;
+    padding: 10px;
+}
+.destrezas{
+    border: 0.2px solid #f42c04;
+    margin: 5px;
+}
+.destrezas p{
+    padding: 20px;
+}
+/*imgs tecnologias*/
+.tech{
+    display: flex;
+    justify-items: center;
+    align-content: center;
 }
 /*Ajustes logo*/
 .logo{
@@ -55,3 +74,10 @@ article{
 .logo:hover{
     transform: scale(110%);
 }
+/*pie de página*/
+footer{
+    min-height: 20vh;
+    background-color: #1f2233;
+
+}
+

@@ -11984,5 +11984,5 @@ textarea.form-control-lg {
 
 .nav-link:hover {
   color: white;
-  border-bottom: #f42c04 1px solid;
+  transition: none;
 }
