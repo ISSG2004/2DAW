@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnEventos">Botón con Eventos</button>
+    <button id="btnEliminar">Eliminar Eventos</button>
+    <script>
+        let btnEventos = document.getElementById('btnEventos');
+        let btnEliminar = document.getElementById('btnEliminar');
+
+        let eventos = {
+            click: function() { console.log('Click!'); },
+            mouseover: function() { console.log('Mouseover!'); },
+            mouseout: function() { console.log('Mouseout!'); }
+        };
+
+        //Función para el primer botón que elimina los eventos
+        for (let evento in eventos) {
+            btnEventos.addEventListener(evento, eventos[evento]);
+        }
+
+        //Función para el segundo botón que elimina los eventos
+        btnEliminar.addEventListener('click', function() {
+            for (let evento in eventos) {
+                btnEventos.removeEventListener(evento, eventos[evento]);
+            }
+        });
+    </script>
+</body>
+</html>
