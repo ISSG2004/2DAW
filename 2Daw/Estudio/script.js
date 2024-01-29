@@ -1,108 +1,97 @@
-var votoPP = 0, votoVOX = 0, votoPSOE = 0, votoSumar = 0, votoPacma = 0, votoNulo = 0;
-miBoton.addEventListener('click', contarClics);
-function validarVoto() {
-    var partidoVotado = document.getElementById("partidoPolitico").value;
-    partidoVotado = partidoVotado.trim().toLowerCase();
-
-    switch (partidoVotado) {
-        case "pp":
-            votoPP++;
-            setCookie('votoPP', votoPP.toString(), 365);
-            mostrarRecuento();
-            abrirVentana();
-            return;
-        case "vox":
-            votoVOX++;
-            setCookie('votoVOX', votoVOX.toString(), 365);
-            mostrarRecuento();
-            abrirVentana();
-            return;
-        case "psoe":
-            votoPSOE++;
-            setCookie('votoPSOE', votoPSOE.toString(), 365);
-            mostrarRecuento();
-            abrirVentana();
-            return;
-        case "sumar":
-            votoSumar++;
-            setCookie('votoSumar', votoSumar.toString(), 365);
-            mostrarRecuento();
-            abrirVentana();
-            return;
-        case "pacma":
-            votoPacma++;
-            setCookie('votoPacma', votoPacma.toString(), 365);
-            mostrarRecuento();
-            abrirVentana();
-            return;
-        default:
-            votoNulo++;
-            setCookie('votoNulo', votoNulo.toString(), 365);
-            mostrarRecuento();
-            abrirVentana();
-            return;
+var usuario={//creacion objeto usuario
+    nombreUsuario:"alumno",
+    contraseña:"bueno",
+    hora:"",
+    cambiarContraseña: function(nuevaContrtaseña) {
+        this.contraseña=nuevaContrtaseña;
+    },
+    asignarHora : function(){
+        this.hora=new Date();
     }
-    
 }
-
-function mostrarRecuento(){
-    document.getElementById("recuentos").innerHTML="<h1>Votos PP </h1>"+votoPP+"<br>"+"<h1>Votos VOX </h1>"+votoVOX+"<br>"+"<h1>Votos PSOE </h1>"+votoPSOE+"<br>"+"<h1>Votos Sumar </h1>"+votoSumar+"<br>"+"<h1>Votos Pacma </h1>"+votoPacma+"<br>"+"<h1>Votos Nulos </h1>"+votoNulo+"<br>";
+var ventana1; var ventana2;var ventana3; var ventana4;
+function crearLimite(){
+    let maximo=parseInt(document.getElementById("longitud").value);
+    return maximo;
 }
-function abrirVentana() {
-    var ventana = window.open(" ", " ","width=400px,height=400px");
-    ventana.document.write("<h1>Muchas gracias por su voto</h1>");//escribir aqui la info que queremos que se escriba en la ventana
-    setTimeout(function() {//asignar un cierre cuando pase x tiempo
-    ventana.close();
-    }, 10000);//aqui modificamos el tiempo en el que queremos que se cierre(esta puesto a 10 segs)
-    
+function generarLongitud(){
+    let random=parseInt(document.getElementById("valores").value);
+    return random;
 }
-
-
-function setCookie(nombre, valor, dias) {
-    const fechaExpiracion = new Date();
-    fechaExpiracion.setDate(fechaExpiracion.getDate() + dias);
-    const cookieValue = escape(valor) + ((dias === null) ? '' : '; expires=' + fechaExpiracion.toUTCString());
-    document.cookie = nombre + '=' + cookieValue + '; path=/';
+//cerrar ventanas
+function cerrarventana1(){
+    ventana1.close();
 }
-
-function reiniciarCookies() {
-    setCookie('votoPP', '0', 365);
-    setCookie('votoPSOE', '0', 365);
-    setCookie('votoVOX', '0', 365);
-    setCookie('votoSumar', '0', 365);
-    setCookie('votoPacma', '0', 365);
-    setCookie('votoNulo', '0', 365);
+function cerrarventana2(){
+    ventana2.close();
 }
+function cerrarventana3(){
+    ventana3.close();
+}
+function cerrarventana4(){
+    ventana4.close();
+}
+//escuchadores de eventos para cerrar ventanas
+cerrav1.addEventListener('click', cerrarventana1());
+cerrarv2.addEventListener('click',cerrarventana2());
+cerrarv3.addEventListener('click',cerrarventana3());
+cerrarv4.addEventListener('click',cerrarventana4());
+//funcionalidades de ventanas
+function abrirVentana1(){
+    ventana1=window.open('_ventanaForm.html','ventana1','height=300px,width=300px');
+    ventana1=window.moveTo(0,0);
+    ventana1.document.body.style.backgroundColor="lightgreen";
+}
+function validarUsuario(){//metodo para validar datos de usuario
+    let usuarioIntroducido=document.getElementById("nombre").value;
+    let contrasenaIntroducida=document.getElementById("contraseña").value;
+    let nuevaContraseña=document.getElementById("NuevaContraseña").value;
+    if (usuarioIntroducido==usuario.nombreUsuario && contrasenaIntroducida==usuario.contraseña){
+        alert("contraseña cambiada")
+        usuario.cambiarContraseña(nuevaContraseña);
+    }else{
+        alert("Datos incorrectos¿Quieres intentarlos de nuevo?")
+    }
+}
+//cosas ventana2
+function abrirVentana2() {
+    ventana2=window.open('','ventana2','height=300px,width=300px');
+    ventana2.moveTo(1900,0);
+    ventana2.document.write("listado de numeros"+crearVector());
+}
+function generarNumeroAleatorio() {
+    return parseInt(Math.random() * crearLimite());
+}
+function crearVector(){
+    let vector=[];
+    for (let i = 0; i < generarLongitud(); i++) {
+        vector.push(parseInt(generarNumeroAleatorio()));
+    }
+    return vector;
+}
+//cosas ventana3
+function abrirVentana3(){
+    ventana3=window.open('','ventana3','height=300px,width=300px');
+    ventana3.moveTo(1900,1900);
+    ventana3.document.write("valores impares "+impares());
+}
+function impares() {
+    let vector = crearVector(); // Llamar a la función una vez y almacenar el resultado
+    let imparesArray = [];
 
-function getCookie(nombre) {
-    const nombreEQ = nombre + '=';
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i];
-        while (cookie.charAt(0) === ' ') {
-            cookie = cookie.substring(1, cookie.length);
-        }
-        if (cookie.indexOf(nombreEQ) === 0) {
-            return cookie.substring(nombreEQ.length, cookie.length);
+    for (let i = 0; i < vector.length; i++) {
+        if (vector[i] % 2 !== 0) {
+            imparesArray.push(parseInt(vector[i]));
         }
     }
-    return '';
+
+    imparesArray.sort(function (a, b) {
+        return a - b;
+    });
+
+    return imparesArray;
 }
 
 
-function contarClics() {
-    // Verificar si la cookie 'contador' existe
-    let contador = getCookie('contador');
 
-    // Si no existe, inicializarlo a 0
-    if (contador === '') {
-        contador = 0;
-    } else {
-        // Si existe, convertirlo de cadena a número
-        contador = parseInt(contador);
-    }
-    // Incrementar el contador
-    contador++;
-    // Almacenar el contador en la cookie
-    setCookie('contador', contador.toString(), 365);
-}
+

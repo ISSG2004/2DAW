@@ -110,13 +110,7 @@ function administrarUsuario() {
     var contraseñaIntroducida = document.getElementById("contraseña").value;
     var contraseñaNueva = "";
     var mensaj=document.getElementById("mensaje");
-    try {
-        if (contraseñaIntroducida=="") {
-            throw"No has introducido contraseña";
-        }
-    } catch (err) {
-        mensaj.innerHTML="<h1>"+err+"</h1>";
-    }
+    
     if (usuarioIntroducido === usuario.nombre && contraseñaIntroducida === usuario.contraseña) {
         document.getElementById("mensajes").innerHTML = "Datos correctos. ¿Deseas cambiar la contraseña?";
         contraseñaNueva = prompt("Introduce la nueva contraseña");
