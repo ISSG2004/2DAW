@@ -7,13 +7,6 @@ main{
     min-height: 55.3vh;
 }
 /*Elementos especificos del formulario*/
-.contenedor {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5em;
-}
-
 ul {
     list-style: none;
     padding: 0;
