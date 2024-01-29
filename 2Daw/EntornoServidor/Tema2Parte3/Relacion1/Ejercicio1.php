@@ -8,7 +8,7 @@
 <body>
     <h1>Formulario simple</h1>
     <h2>Búsqueda de canciones</h2>
-    <form action="Ejercicio1.php" method="post">
+    <form action="Ejercicio1-resultados.php" method="post">
         <fieldset>
         <label for="TxtBusq">Texto a buscar</label>
         <input type="text" name="TxtBusq" >
