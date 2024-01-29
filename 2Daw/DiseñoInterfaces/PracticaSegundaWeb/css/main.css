@@ -8,7 +8,7 @@ body {
 }
 /*menú*/
 
-
+/*mediaq que centre la imagen en dispositivos medianos y pequeños*/
 /*Estilos relacionados con el main*/
 main{
     padding: 20px;
@@ -28,6 +28,6 @@ main{
 /*pie de página*/
 footer{
     background-color: #1f2233;
-
+    min-height: 30vh;
 }
 

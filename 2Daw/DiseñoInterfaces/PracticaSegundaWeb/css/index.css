@@ -43,9 +43,3 @@ h2{
 .destrezas p{
     padding: 20px;
 }
-/*imgs tecnologias*/
-.tech{
-    display: flex;
-    justify-items: center;
-    align-content: center;
-}

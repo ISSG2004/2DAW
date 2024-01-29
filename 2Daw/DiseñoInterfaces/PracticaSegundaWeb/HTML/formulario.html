@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Ismael Sánchez Web-Dev</title>
+    <title>Formulario de contacto</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -18,11 +18,11 @@
 
 <body>
     <header>
-        <div class="container-fluid">
             <!-- place navbar here -->
-            <nav class="navbar navbar-expand-md ">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="./index.html"><img src="../Imágenes/logo_portfolio.png" alt="logo_web" class="logo"></a>
+                    <a class="navbar-brand" href="./index.html"><img src="../Imágenes/logo_portfolio.png" alt="logo_web"
+                            class="logo"></a>
                     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -40,18 +40,62 @@
                                 <a class="nav-link" href="#">Proyectos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contactar</a>
+                                <a class="nav-link" href="./formulario.html">Contactar</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </div>
     </header>
     <!--Cuerpo de la web-->
     <main>
         <!--Inicio formulario-->
-        
+        <h1 class="logo">Contactar</h1>
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="Contform">
+                <h3>Formulario de contacto</h3>
+                <form action="">
+                    <p>
+                        <label>Nombre </label>
+                        <input type="text" name="Nombre ">
+                    </p>
+                    <p>
+                        <label>Apellidos </label>
+                        <input type="text" name="apellidos">
+                    </p>
+                    <p>
+                        <label>Teléfono</label>
+                        <input type="tel" name="telefono">
+                    </p>
+                    <p>
+                        <label>Correo electrónico</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p class="block">
+                        <label>Mensaje</label>
+                        <textarea name="Mensaje" rows="3"></textarea>
+                    </p>
+                    <p class="block">
+                        <button>
+                            Enviar mensaje
+                        </button>
+                    </p>
+                </form>
+            </div>
+            <div class="Continfo">
+                <h4>More Info</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Baker Street</li>
+                    <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
+                    <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus
+                    repellendus?</p>
+                <p>Company.com</p>
+            </div>
+        </div>
+
+        </div>
     </main>
     <footer>
         <!-- place footer here -->
@@ -65,4 +109,5 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
