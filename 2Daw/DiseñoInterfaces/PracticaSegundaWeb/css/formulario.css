@@ -6,6 +6,7 @@ header{
 main{
     min-height: 55.3vh;
 }
+
 /*Elementos especificos del formulario*/
 ul {
     list-style: none;
@@ -17,13 +18,16 @@ ul {
     font-size: 3em;
 }
 
-
-.contact-wrapper > * {
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.contenedor > * {
     padding: 1em;
 }
 
 .Contform {
-    background: #222222;
+    background: #1f2233;
 }
 
 .Contform form {
@@ -61,6 +65,7 @@ ul {
     border: 0;
     text-transform: uppercase;
     padding: 1em;
+    border-radius: 10px;
 }
 
 .Contform form button:hover,
@@ -73,7 +78,7 @@ ul {
 
 /* CONTACT INFO */
 .Continfo {
-    background: #000;
+    background: #1a1d2b;
 }
 
 .Continfo h4, .Continfo ul, .Continfo p {
@@ -81,21 +86,26 @@ ul {
     margin: 0 0 1rem 0;
 }
 
+.masInfo li{
+    padding: 20px;
+    text-align: center;
+}
+
 /* Tablets y dispositivos más grandes */
 @media(min-width: 700px) {
-    body {
-        padding: 0 4em;
-    }
-    .contact-wrapper {
+    .contenedor {
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
-    .contact-wrapper > * {
+    .contenedor > * {
         padding: 2em;
     }
     .Continfo h4,
     .Continfo ul,
     .Continfo p {
-        text-align: left;
+        text-align: center;
     }
+}
+footer{
+    min-height: 28.7vh;
 }

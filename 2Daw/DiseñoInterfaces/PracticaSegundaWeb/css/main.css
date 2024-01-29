@@ -7,7 +7,9 @@ body {
     overflow-x: hidden;
 }
 /*menú*/
-
+nav{
+    position: sticky;
+}
 /*mediaq que centre la imagen en dispositivos medianos y pequeños*/
 /*Estilos relacionados con el main*/
 main{
@@ -28,6 +30,20 @@ main{
 /*pie de página*/
 footer{
     background-color: #1f2233;
-    min-height: 30vh;
+    color: white;
+    padding: 20px;
+}
+footer .derechos{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2%;
 }
 
+.iconos{
+    align-items:center ;
+    display: flex;
+    justify-content: center;
+}
+.iconos div{
+    padding: 10px;
+}
