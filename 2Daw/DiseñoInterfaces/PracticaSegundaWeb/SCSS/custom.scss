@@ -4,6 +4,7 @@
     font-weight: bold;
     color: white;
     text-align: center;
+    font-size: 14px;
 }
 .nav-item {
     padding: 20px;
@@ -13,4 +14,10 @@
     //border-bottom: red 1px solid;
     transition: none;
 }
-
+//modificar boton del menú
+.navbar-toggler{ 
+    color: white;
+    border-color:white;
+}
+//añadimos mediaquery para dispositivos md y sm que tenga 14 de tamaño de fuente
+//en dispositivos grandes 18

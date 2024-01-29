@@ -11976,6 +11976,7 @@ textarea.form-control-lg {
   font-weight: bold;
   color: white;
   text-align: center;
+  font-size: 14px;
 }
 
 .nav-item {
@@ -11985,4 +11986,9 @@ textarea.form-control-lg {
 .nav-link:hover {
   color: white;
   transition: none;
+}
+
+.navbar-toggler {
+  color: white;
+  border-color: white;
 }

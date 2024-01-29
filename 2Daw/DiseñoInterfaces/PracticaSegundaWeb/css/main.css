@@ -8,63 +8,14 @@ body {
 }
 /*menú*/
 
-/*Texto cabecera*/
-.textoPaginaPrincp > h1{
-    font-size: 25px;
-}
-.textoPaginaPrincp{
-    font-weight: bold;
-    text-align: center;
-    font-size: 25px;
-}
-/*Boton contactar*/
-header{
-    background-image: url(../Imágenes/Imagen\ header.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    min-height: 45vh;
-    color: rgb(255, 255, 255);
-    
-}
-.contacto{
-    background-color: #0f1a2093;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    border: #0f1a20 2px solid;
-    border-radius: 15px;
-    margin-bottom: 30%;
-}
-.contacto:hover{
-    transform: scale(110%);
-    box-shadow: 0 4px 8px 0 #f42c04, 0 6px 20px
-}
+
 /*Estilos relacionados con el main*/
 main{
     padding: 20px;
     color: white;
     background-color: #25273e;
 }
-/*Destrezas */
 
-h2{
-    text-align: center;
-    padding: 10px;
-}
-.destrezas{
-    border: 0.2px solid #f42c04;
-    margin: 5px;
-}
-.destrezas p{
-    padding: 20px;
-}
-/*imgs tecnologias*/
-.tech{
-    display: flex;
-    justify-items: center;
-    align-content: center;
-}
 /*Ajustes logo*/
 .logo{
     height: 75px;
@@ -76,7 +27,6 @@ h2{
 }
 /*pie de página*/
 footer{
-    min-height: 20vh;
     background-color: #1f2233;
 
 }
