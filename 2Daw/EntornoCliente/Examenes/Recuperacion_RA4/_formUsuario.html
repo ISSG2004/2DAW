@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: lightgreen;
+    }
+</style>
+<body>
+    <label for="nombreusu">Nombre de usuario: </label>
+    <input type="text" name="nombreusu" id="usuario">
+    <br><br>
+    <label for="contraseña">Contraseña: </label>
+    <input type="number" name="contraseña" id="contraseña">
+    <br><br>
+    <label for="contraseña2">Repita contraseña: </label>
+    <input type="number" name="contraseña2" id="contraseñaRepetida">
+    <p id="errorContraseña1"></p>
+    <br><br>
+    <button onclick="verificarDatos()">Enviar datos</button>
+    <p id="aviso"></p>
+    <script src="./script.js"></script>
+</body>
+</html>
