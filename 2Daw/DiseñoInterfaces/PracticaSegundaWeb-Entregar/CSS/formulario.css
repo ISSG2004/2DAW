@@ -1,0 +1,111 @@
+/*Cabecera*/
+header{
+    background-color: #1f2233;
+}
+/*main*/
+main{
+    min-height: 55.3vh;
+}
+
+/*Elementos especificos del formulario*/
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.contenedor > * {
+    padding: 1em;
+}
+
+.Contform {
+    background: #1f2233;
+}
+
+.Contform form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Contform form label {
+    display: block;
+}
+
+.Contform form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.Contform form .block {
+    grid-column: 1 / 3;
+}
+
+.Contform form button,
+.Contform form input,
+.Contform form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+
+.Contform form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.Contform form button:hover,
+.Contform form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+.Continfo {
+    background: #1a1d2b;
+}
+
+.Continfo h4, .Continfo ul, .Continfo p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.masInfo li{
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tablets y dispositivos más grandes */
+@media(min-width: 700px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contenedor > * {
+        padding: 2em;
+    }
+    .Continfo h4,
+    .Continfo ul,
+    .Continfo p {
+        text-align: center;
+    }
+}
+footer{
+    min-height: 28.7vh;
+}
