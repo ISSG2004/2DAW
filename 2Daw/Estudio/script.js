@@ -1,96 +1,118 @@
-var usuario={//creacion objeto usuario
-    nombreUsuario:"alumno",
-    contraseña:"bueno",
-    hora:"",
-    cambiarContraseña: function(nuevaContrtaseña) {
-        this.contraseña=nuevaContrtaseña;
+var usuario = {
+    nombreUsuario: "alumno",
+    contraseña: "bueno",
+    hora: "",
+    cambiarContraseña: function (nuevaContrtaseña) {
+        this.contraseña = nuevaContrtaseña;
+        this.asignarHora();
     },
-    asignarHora : function(){
-        this.hora=new Date();
+    asignarHora: function () {
+        let fechaActual = new Date();
+        this.hora = fechaActual.toLocaleString(); // Guardar la hora en formato legible
     }
 }
-var ventana1; var ventana2;var ventana3; var ventana4;
-function crearLimite(){
-    let maximo=parseInt(document.getElementById("longitud").value);
+
+var ventana1;
+var ventana2;
+var ventana3;
+var ventana4;
+var vectorGlobal; // Variable global para almacenar el vector
+
+function crearLimite() {
+    let maximo = parseInt(document.getElementById("longitud").value);
     return maximo;
 }
-function generarLongitud(){
-    let random=parseInt(document.getElementById("valores").value);
+
+function generarLongitud() {
+    let random = parseInt(document.getElementById("valores").value);
     return random;
 }
-//cerrar ventanas
-function cerrarventana1(){
+
+// Cerrar ventanas
+function cerrarventana1() {
     ventana1.close();
 }
-function cerrarventana2(){
+
+function cerrarventana2() {
     ventana2.close();
 }
-function cerrarventana3(){
+
+function cerrarventana3() {
     ventana3.close();
 }
-function cerrarventana4(){
+
+function cerrarventana4() {
     ventana4.close();
 }
-//escuchadores de eventos para cerrar ventanas
-cerrav1.addEventListener('click', cerrarventana1());
-cerrarv2.addEventListener('click',cerrarventana2());
-cerrarv3.addEventListener('click',cerrarventana3());
-cerrarv4.addEventListener('click',cerrarventana4());
-//funcionalidades de ventanas
-function abrirVentana1(){
-    ventana1=window.open('_ventanaForm.html','ventana1','height=300px,width=300px');
-    ventana1=window.moveTo(0,0);
-    ventana1.document.body.style.backgroundColor="lightgreen";
+
+// Escuchadores de eventos para cerrar ventanas
+cerrav1.addEventListener('click', cerrarventana1);
+cerrarv2.addEventListener('click', cerrarventana2);
+cerrarv3.addEventListener('click', cerrarventana3);
+cerrarv4.addEventListener('click', cerrarventana4);
+
+// Funcionalidades de ventanas
+function abrirVentana1() {
+    ventana1 = window.open('_ventanaForm.html', 'ventana1', 'height=300px,width=300px');
+    ventana1 = window.moveTo(0, 0);
+    ventana1.document.body.style.backgroundColor = "lightgreen";
 }
-function validarUsuario(){//metodo para validar datos de usuario
-    let usuarioIntroducido=document.getElementById("nombre").value;
-    let contrasenaIntroducida=document.getElementById("contraseña").value;
-    let nuevaContraseña=document.getElementById("NuevaContraseña").value;
-    if (usuarioIntroducido==usuario.nombreUsuario && contrasenaIntroducida==usuario.contraseña){
+
+function validarUsuario() {
+    let usuarioIntroducido = document.getElementById("nombre").value;
+    let contrasenaIntroducida = document.getElementById("contraseña").value;
+    let nuevaContraseña = document.getElementById("NuevaContraseña").value;
+    if (usuarioIntroducido == usuario.nombreUsuario && contrasenaIntroducida == usuario.contraseña) {
         alert("contraseña cambiada")
         usuario.cambiarContraseña(nuevaContraseña);
-    }else{
-        alert("Datos incorrectos¿Quieres intentarlos de nuevo?")
+    } else {
+        alert("Datos incorrectos ¿Quieres intentarlos de nuevo?");
     }
 }
-//cosas ventana2
+
+// Cosas ventana2
 function abrirVentana2() {
-    ventana2=window.open('','ventana2','height=300px,width=300px');
-    ventana2.moveTo(1900,0);
-    ventana2.document.write("listado de numeros"+crearVector());
+    vectorGlobal = crearVector(); // Almacena el vector en la variable global
+    ventana2 = window.open('', 'ventana2', 'height=300px,width=300px');
+    ventana2.moveTo(1900, 0);
+    ventana2.document.write("listado de numeros" + vectorGlobal);
 }
+
 function generarNumeroAleatorio() {
     return parseInt(Math.random() * crearLimite());
 }
-function crearVector(){
+
+function crearVector() {
     let vector=[];
     for (let i = 0; i < generarLongitud(); i++) {
-        vector.push(parseInt(generarNumeroAleatorio()));
+        vector.push(generarNumeroAleatorio());
     }
     return vector;
 }
-//cosas ventana3
-function abrirVentana3(){
-    ventana3=window.open('','ventana3','height=300px,width=300px');
-    ventana3.moveTo(1900,1900);
-    ventana3.document.write("valores impares "+impares());
+
+// Cosas ventana3
+function abrirVentana3() {
+    ventana3 = window.open('', 'ventana3', 'height=300px,width=300px');
+    ventana3.moveTo(1900, 1900);
+    ventana3.document.write("valores impares " + impares());
 }
+
 function impares() {
-    let vector = crearVector(); // Llamar a la función una vez y almacenar el resultado
-    let imparesArray = [];
+    let imparesArray = vectorGlobal.filter(numero => numero % 2 !== 0);
 
-    for (let i = 0; i < vector.length; i++) {
-        if (vector[i] % 2 !== 0) {
-            imparesArray.push(parseInt(vector[i]));
-        }
-    }
-
-    imparesArray.sort(function (a, b) {
-        return a - b;
-    });
+    imparesArray.sort((a, b) => a - b);
 
     return imparesArray;
 }
+//cosas ventana4
+
+function abrirVentana4() {
+    ventana4 = window.open('', 'ventana4', 'height=300px,width=300px');
+    ventana4.moveTo(0, 1900);
+    ventana4.document.write("Contraseña vigente: " + usuario.contraseña + "<br>");
+    ventana4.document.write("Última vez introducida: " + usuario.hora);
+}
+
 
 
 
