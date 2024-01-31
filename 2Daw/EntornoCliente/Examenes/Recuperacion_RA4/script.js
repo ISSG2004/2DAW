@@ -6,10 +6,6 @@ var Usuario = {
         this.nombre=nombre;
         this.contraseña=contraseña;
     },
-    usuario:function(nombre,contraseña){//metodo constructor para crear el usuario
-        this.nombre=nombre;
-        this.contraseña=contraseña;
-    },
     borrarContraseña:function(){//metodo para borrar la contraseña actual
         this.contraseña="";
     }
@@ -46,23 +42,27 @@ function aVentana1(){
     
 }
 
-function verificarDatos(){
-    var usuarioIntroducido=document.getElementById("usuario").value;
-    var contraseñaIntroducida=parseInt(document.getElementById("contraseña").value);
-    var contraseñaRepetida=parseInt(document.getElementById("contraseñaRepetida").value);
-    if (contraseñaRepetida!=contraseñaIntroducida) {
-        document.getElementById("errorContraseña1").innerHTML="Las contraseñas introducidas son distinas";
+function verificarDatos() {
+    var usuarioIntroducido = document.getElementById("usuario").value;
+    var contraseñaIntroducida = parseInt(document.getElementById("contraseña").value);
+    var contraseñaRepetida = parseInt(document.getElementById("contraseñaRepetida").value);
+
+    if (isNaN(contraseñaIntroducida) || isNaN(contraseñaRepetida)) {
+        document.getElementById("errorContraseña1").innerHTML = "Las contraseñas deben ser números";
+    } else if (contraseñaRepetida !== contraseñaIntroducida) {
+        document.getElementById("errorContraseña1").innerHTML = "Las contraseñas introducidas son distintas";
     } else {
-        if (usuarioIntroducido.length()>5 ||contraseñaIntroducida>9999) {
-            document.getElementById("errorContraseña1").innerHTML="Algun dato de usuario es incorrecto";
+        if (usuarioIntroducido.length >= 6 || contraseñaIntroducida < 10000) {
+            document.getElementById("errorContraseña1").innerHTML = "Algun dato de usuario es incorrecto";
         } else {
-            document.getElementById("aviso").innerHTML="Usuario creado correctamente";
-            usuarioCreado=new Usuario(usuarioIntroducido,contraseñaIntroducida);
-            document.getElementById("errorContraseña1").innerHTML="";
-            document.getElementById("aviso").innerHTML="Usuario creado correctamente";
+            document.getElementById("errorContraseña1").innerHTML = "";
+            document.getElementById("aviso").innerHTML = "Usuario creado correctamente";
+            // Aquí puedes hacer lo que necesites con el nuevo usuario
+            usuarioCreado = new Usuario(usuarioIntroducido, contraseñaIntroducida);
         }
     }
 }
+
 
 
 //cerrar ventana1
@@ -82,7 +82,7 @@ function aVentana2(){
 }
 //mostrar datos usuario
 document.getElementById("usuarioV2").innerHTML=Usuario.nombre;
-document.getElementById("contraseañv2").innerHTML=Usuario.contraseña;
+document.getElementById("contraseñav2").innerHTML=Usuario.contraseña;
 function borrar(){//borramos contraseña
     Usuario.borrarContraseña();
 }
