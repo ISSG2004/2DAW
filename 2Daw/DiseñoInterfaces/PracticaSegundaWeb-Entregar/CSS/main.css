@@ -22,8 +22,8 @@ main{
 
 /*Ajustes logo*/
 .logo{
-    height: 75px;
-    width: auto;
+    max-height: 75px;
+    max-width: auto;
     margin: 20px;
 }
 .logo:hover{
@@ -59,3 +59,4 @@ p,li,span{
 a{
     font-family: 'Mukta', sans-serif;
 }
+/*MediaQuery*/
