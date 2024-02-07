@@ -1,4 +1,4 @@
-CREATE DATABASE inmobiliaria DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci; 
+CREATE DATABASE IF NOT EXISTS inmobiliaria DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci; 
 USE inmobiliaria;
 
 #

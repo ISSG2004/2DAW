@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php
+        $llamadaBD= new mysqli("localhost","dwes","abc123.","inmobiliaria");
+        #$llamadaBD->connect("localhost","dwes","abc123.","inmobiliaria");
+        $Titulo=$llamadaBD->query('SELECT Titulo FROM NOTICIAS');
+        
+    ?>
 </body>
 </html>
