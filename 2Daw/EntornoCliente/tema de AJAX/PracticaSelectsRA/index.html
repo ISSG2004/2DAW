@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <label for="raSelect">Selecciona un RA:</label>
+    <select id="raSelect">
+        <option value="RA1">RA1</option>
+        <option value="RA2">RA2</option>
+        <option value="RA3">RA3</option>
+        <option value="RA4">RA4</option>
+        <option value="RA5">RA5</option>
+        <option value="RA6">RA6</option>
+        <option value="RA7">RA7</option>
+    </select>
+    <button onclick="mostrarDatosRA()">Mostrar Datos</button>
+    <div id="info"></div>
+    <script type="text/javascript">
+        var resultado = document.getElementById("info");
+        function mostrarDatosRA() {
+            var selectRA = document.getElementById("raSelect").value;
+            resultado.innerHTML = ""; // Limpiar el contenido previo
+            if (selectRA !== "") {
+                var xmlhttp;
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                        var datos = JSON.parse(xmlhttp.responseText);
+                        for (var i in datos) {
+                            for (var j = 0; j < datos[i].length; j++) {
+                                if (datos[i][j].id === selectRA) {
+                                    resultado.innerHTML += "<h1>"+datos[i][j].id+"</h1>" + "<br/>";
+                                    resultado.innerHTML += "Título RA: " + datos[i][j].textoRA + "<br/>";
+                                    resultado.innerHTML += "criterios: " + "<br/>";
+                                    var criterios = datos[i][j].criterios;
+                                    for (var k in criterios) {
+                                        resultado.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;" + k + ": " + criterios[k] + "<br/>";
+                                    }
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+                xmlhttp.open("GET", "ArchivoFOL.json", true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+</body>
+</html>
