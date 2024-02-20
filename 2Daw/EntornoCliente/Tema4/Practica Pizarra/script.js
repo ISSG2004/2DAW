@@ -40,7 +40,117 @@ function crearTablero() {
     // Agregar el tablero al contenedor
     contenedor.appendChild(tablero);
 }
-
-// Llamar a la función para crear el tablero una vez que el DOM esté completamente cargado
+//asigancion de clase asignado a los elementos
+var color1 = document.getElementsByClassName("color1")[0];
+var color2=document.getElementsByClassName("color2")[0];
+var color3=document.getElementsByClassName("color3")[0];
+var color4=document.getElementsByClassName("color4")[0];
+var color5=document.getElementsByClassName("color5")[0];
+var color6=document.getElementsByClassName("color6")[0];
+color1.addEventListener('click', asignarC1);
+function asignarC1() {
+    color1.classList.add('seleccionado');
+    color2.classList.remove('seleccionado');
+    color3.classList.remove('seleccionado');
+    color4.classList.remove('seleccionado');
+    color5.classList.remove('seleccionado');
+    color6.classList.remove('seleccionado');
+}
+color2.addEventListener('click', asignarC2);
+function asignarC2() {
+    color2.classList.add('seleccionado');
+    color1.classList.remove('seleccionado');
+    color3.classList.remove('seleccionado');
+    color4.classList.remove('seleccionado');
+    color5.classList.remove('seleccionado');
+    color6.classList.remove('seleccionado');
+}
+color3.addEventListener('click', asignarC3);
+function asignarC3() {
+    color3.classList.add('seleccionado');
+    color2.classList.remove('seleccionado');
+    color1.classList.remove('seleccionado');
+    color4.classList.remove('seleccionado');
+    color5.classList.remove('seleccionado');
+    color6.classList.remove('seleccionado');
+}
+color4.addEventListener('click', asignarC4);
+function asignarC4() {
+    color4.classList.add('seleccionado');
+    color2.classList.remove('seleccionado');
+    color3.classList.remove('seleccionado');
+    color1.classList.remove('seleccionado');
+    color5.classList.remove('seleccionado');
+    color6.classList.remove('seleccionado');
+}
+color5.addEventListener('click', asignarC5);
+function asignarC5() {
+    color5.classList.add('seleccionado');
+    color2.classList.remove('seleccionado');
+    color3.classList.remove('seleccionado');
+    color4.classList.remove('seleccionado');
+    color1.classList.remove('seleccionado');
+    color6.classList.remove('seleccionado');
+}
+color6.addEventListener('click', asignarC6);
+function asignarC6() {
+    color6.classList.add('seleccionado');
+    color2.classList.remove('seleccionado');
+    color3.classList.remove('seleccionado');
+    color4.classList.remove('seleccionado');
+    color5.classList.remove('seleccionado');
+    color1.classList.remove('seleccionado');
+}
+// Crear el tablero una vez que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
     crearTablero();
+    // Seleccionamos todas las celdas de la tabla después de crear el tablero
+    let celdas = document.querySelectorAll('#zonadibujo .celda');
+    // Seleccionamos el estado del pincel para editar el mensaje
+    let estadoPincel = document.querySelector('#pincel');
 
+    // Variable para indicar si el pincel está activo
+    let pincelActivo = false;
+
+    // Añadimos el evento 'mousedown' a cada celda para activar el pincel
+    celdas.forEach(function(celda) {
+        celda.addEventListener('mousedown', function(event) {
+            // Activamos el pincel
+            pincelActivo = true;
+            // Cambiamos el texto del estado del pincel
+            estadoPincel.textContent = "PINCEL ACTIVADO";
+            // Llamamos a la función para pintar la celda actual
+            pintarCelda(celda);
+        });
+    });
+
+    // Añadimos el evento 'mouseup' al body para desactivar el pincel
+    document.body.addEventListener('mouseup', function(event) {
+        // Desactivamos el pincel
+        pincelActivo = false;
+        // Cambiamos el texto del estado del pincel
+        estadoPincel.textContent = "PINCEL DESACTIVADO";
+    });
+
+    // Añadimos el evento 'mousemove' a cada celda para pintar mientras el mouse se mueve
+    celdas.forEach(function(celda) {
+        celda.addEventListener('mousemove', function(event) {
+            // Si el pincel está activo, pintamos la celda actual
+            if (pincelActivo) {
+                pintarCelda(celda);
+            }
+        });
+    });
+
+    // Función para pintar una celda
+    function pintarCelda(celda) {
+        // Si hay un color seleccionado
+        let colorSeleccionado = document.querySelector('.seleccionado');
+        if (colorSeleccionado) {
+            // Obtenemos el color seleccionado
+            let color = window.getComputedStyle(colorSeleccionado).backgroundColor;
+            // Pintamos la celda con el color seleccionado
+            celda.style.backgroundColor = color;
+        }
+    }
+});
