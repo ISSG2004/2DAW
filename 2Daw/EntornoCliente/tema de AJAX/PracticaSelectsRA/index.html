@@ -19,12 +19,15 @@
     <select id="criterioSelect"></select>
     <button onclick="mostrarDatosRA()">Mostrar Datos</button>
     <div id="info"></div>
+    <div id="opcionSeleccionada"></div> <!-- Nuevo div para mostrar la opción seleccionada -->
     <script type="text/javascript">
         function mostrarDatosRA() {
             var resultado = document.getElementById("info");
             var selectRA = document.getElementById("raSelect").value;
             var criterioSelect = document.getElementById("criterioSelect");
+            var opcionSeleccionadaDiv = document.getElementById("opcionSeleccionada"); // Nuevo div
             resultado.innerHTML = ""; // Limpiar el contenido previo
+            opcionSeleccionadaDiv.innerHTML = ""; // Limpiar contenido previo
             if (selectRA !== "") {
                 var xmlhttp;
                 if (window.XMLHttpRequest) {
@@ -57,6 +60,16 @@
                 xmlhttp.send();
             }
         }
+        
+        // Función para mostrar la opción seleccionada en pantalla
+        function mostrarOpcionSeleccionada() {
+            var opcionSeleccionada = document.getElementById("criterioSelect").value;
+            var opcionSeleccionadaDiv = document.getElementById("opcionSeleccionada");
+            opcionSeleccionadaDiv.innerHTML ="<h1>Criterio seleccionado: </h1>"+ opcionSeleccionada;
+        }
+        
+        // Asignar la función mostrarOpcionSeleccionada al evento onchange del select de criterios
+        document.getElementById("criterioSelect").onchange = mostrarOpcionSeleccionada;
     </script>
 </body>
 </html>
