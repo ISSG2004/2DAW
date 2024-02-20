@@ -1,0 +1,46 @@
+/*Cabecera*/
+.textoPaginaPrincp > h1{
+    font-size: 25px;
+}
+.textoPaginaPrincp{
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+header{
+    background-image: url(../Imágenes/Imagen\ header.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 45vh;
+    color: rgb(255, 255, 255);
+    
+}
+/*Boton contactar*/
+.contacto{
+    background-color: #0f1a2093;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: #0f1a20 2px solid;
+    border-radius: 15px;
+    margin-bottom: 30%;
+}
+.contacto:hover{
+    transform: scale(110%);
+    box-shadow: 0 4px 8px 0 #f42c04, 0 6px 20px
+}
+/*Destrezas */
+
+h2{
+    text-align: center;
+    padding: 10px;
+}
+.destrezas{
+    border: 0.2px solid #f42c04;
+    margin: 5px;
+    height: 40vh;
+}
+.destrezas p{
+    padding: 20px;
+}

@@ -1,0 +1,13 @@
+/*Cabecera*/
+header{
+    background-color: #1f2233;
+}
+/*main*/
+main{
+    min-height: 55.3vh;
+}
+
+
+footer{
+    min-height: 28.7vh;
+}
