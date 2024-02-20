@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Mostrar Datos RA</title>
 </head>
 <body>
     <label for="raSelect">Selecciona un RA:</label>
@@ -16,12 +16,14 @@
         <option value="RA6">RA6</option>
         <option value="RA7">RA7</option>
     </select>
+    <select id="criterioSelect"></select>
     <button onclick="mostrarDatosRA()">Mostrar Datos</button>
     <div id="info"></div>
     <script type="text/javascript">
-        var resultado = document.getElementById("info");
         function mostrarDatosRA() {
+            var resultado = document.getElementById("info");
             var selectRA = document.getElementById("raSelect").value;
+            var criterioSelect = document.getElementById("criterioSelect");
             resultado.innerHTML = ""; // Limpiar el contenido previo
             if (selectRA !== "") {
                 var xmlhttp;
@@ -38,12 +40,14 @@
                                 if (datos[i][j].id === selectRA) {
                                     resultado.innerHTML += "<h1>"+datos[i][j].id+"</h1>" + "<br/>";
                                     resultado.innerHTML += "Título RA: " + datos[i][j].textoRA + "<br/>";
-                                    resultado.innerHTML += "criterios: " + "<br/>";
+                                    resultado.innerHTML += "Criterios: " + "<br/>";
                                     var criterios = datos[i][j].criterios;
+                                    criterioSelect.innerHTML = ""; // Limpiar opciones previas
                                     for (var k in criterios) {
-                                        resultado.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;" + k + ": " + criterios[k] + "<br/>";
+                                        var option = document.createElement('option');
+                                        option.text = criterios[k];
+                                        criterioSelect.add(option);
                                     }
-                                    return;
                                 }
                             }
                         }
