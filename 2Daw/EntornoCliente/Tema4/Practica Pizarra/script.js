@@ -118,25 +118,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Variable para indicar si el pincel está activo
     let pincelActivo = false;
-
+    estadoPincel.textContent = "PINCEL DESACTIVADO";
     // Añadimos el evento 'mousedown' a cada celda para activar el pincel
     celdas.forEach(function(celda) {
-        celda.addEventListener('mousedown', function(event) {
-            // Activamos el pincel
-            pincelActivo = true;
-            // Cambiamos el texto del estado del pincel
-            estadoPincel.textContent = "PINCEL ACTIVADO";
-            // Llamamos a la función para pintar la celda actual
-            pintarCelda(celda);
-        });
-    });
-
-    // Añadimos el evento 'mouseup' al body para desactivar el pincel
-    document.body.addEventListener('mouseup', function(event) {
-        // Desactivamos el pincel
-        pincelActivo = false;
-        // Cambiamos el texto del estado del pincel
-        estadoPincel.textContent = "PINCEL DESACTIVADO";
+            celda.addEventListener('click', function(event) {
+                // Activamos el pincel
+                pincelActivo = true;
+                // Cambiamos el texto del estado del pincel
+                estadoPincel.textContent = "PINCEL ACTIVADO";
+                // Llamamos a la función para pintar la celda actual
+                pintarCelda(celda);
+            }); 
     });
 
     // Añadimos el evento 'mousemove' a cada celda para pintar mientras el mouse se mueve
