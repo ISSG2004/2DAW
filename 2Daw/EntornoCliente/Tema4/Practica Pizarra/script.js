@@ -5,6 +5,13 @@
 //siempre saldrá un mensaje indicando que estado tiene el pincel
 //crearemos las celdas con métodos de manipular DOM(será de 30X30 el tablero y cada celda será de 10px X 10px)
 // Función para crear el tablero de dibujo
+//Adaptación cross-browser
+var xmlhttp;
+if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+} else {
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+}
 function crearTablero() {
     // Obtener el contenedor donde se agregará el tablero
     var contenedor = document.getElementById("zonadibujo");
