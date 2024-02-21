@@ -111,45 +111,54 @@ function asignarC6() {
 // Crear el tablero una vez que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
     crearTablero();
-    // Seleccionamos todas las celdas de la tabla después de crear el tablero
-    let celdas = document.querySelectorAll('#zonadibujo .celda');
-    // Seleccionamos el estado del pincel para editar el mensaje
-    let estadoPincel = document.querySelector('#pincel');
 
-    // Variable para indicar si el pincel está activo
-    let pincelActivo = false;
-    estadoPincel.textContent = "PINCEL DESACTIVADO";
-    // Añadimos el evento 'mousedown' a cada celda para activar el pincel
-    celdas.forEach(function(celda) {
-            celda.addEventListener('click', function(event) {
-                // Activamos el pincel
-                pincelActivo = true;
-                // Cambiamos el texto del estado del pincel
-                estadoPincel.textContent = "PINCEL ACTIVADO";
-                // Llamamos a la función para pintar la celda actual
-                pintarCelda(celda);
-            }); 
-    });
+// Seleccionamos todas las celdas de la tabla después de crear el tablero
+let celdas = document.querySelectorAll('#zonadibujo .celda');
 
-    // Añadimos el evento 'mousemove' a cada celda para pintar mientras el mouse se mueve
-    celdas.forEach(function(celda) {
-        celda.addEventListener('mousemove', function(event) {
-            // Si el pincel está activo, pintamos la celda actual
-            if (pincelActivo) {
-                pintarCelda(celda);
-            }
-        });
-    });
+// Seleccionamos el estado del pincel para editar el mensaje
+let estadoPincel = document.querySelector('#pincel');
 
-    // Función para pintar una celda
-    function pintarCelda(celda) {
-        // Si hay un color seleccionado
-        let colorSeleccionado = document.querySelector('.seleccionado');
-        if (colorSeleccionado) {
-            // Obtenemos el color seleccionado
-            let color = window.getComputedStyle(colorSeleccionado).backgroundColor;
-            // Pintamos la celda con el color seleccionado
-            celda.style.backgroundColor = color;
-        }
+// Variable para indicar si el pincel está activo
+let pincelActivo = false;
+estadoPincel.textContent = "PINCEL DESACTIVADO";
+
+// Función para activar/desactivar el pincel
+function activarPincel() {
+    if (pincelActivo === false) {
+        pincelActivo = true; 
+        // Cambiamos el texto para indicar que el pincel está activado.
+        estadoPincel.textContent = "PINCEL ACTIVADO";
+    } else {
+        pincelActivo = false;
+        estadoPincel.textContent = "PINCEL DESACTIVADO";
     }
+}
+
+// Función para manejar el evento mouseover
+function pintar(event) {
+    if (pincelActivo) {
+        pintarCelda(event.target);
+    }
+}
+
+// Añadimos el evento 'mousedown' a cada celda para activar el pincel
+celdas.forEach(function(celda) {
+    celda.addEventListener('click', function(event) {
+        activarPincel();
+    }); 
+    celda.addEventListener('mouseover', pintar);
+});
+
+// Función para pintar una celda
+function pintarCelda(celda) {
+    // Si hay un color seleccionado
+    let colorSeleccionado = document.querySelector('.seleccionado');
+    if (colorSeleccionado) {
+        // Obtenemos el color seleccionado
+        let color = window.getComputedStyle(colorSeleccionado).backgroundColor;
+        // Pintamos la celda con el color seleccionado
+        celda.style.backgroundColor = color;
+    }
+}
+
 });
