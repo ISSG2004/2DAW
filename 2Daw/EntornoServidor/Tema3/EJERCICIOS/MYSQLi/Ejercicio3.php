@@ -60,5 +60,5 @@
         <input type="submit" name="eliminar" value="Eliminar noticias marcadas">
     </form>
 </body>
-
+p
 </html>
