@@ -12,7 +12,7 @@
     if (isset($_POST["eliminar"])) {
         if (isset($_POST["ids"])) {
             $ids = $_POST["ids"];
-            @$dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
+            $dwes = new mysqli('localhost', 'dwes', 'abc123.', 'inmobiliaria');
             $error = $dwes->connect_errno;
             if ($error == null) {
                 foreach ($ids as $id) {
