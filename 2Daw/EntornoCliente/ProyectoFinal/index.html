@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #criterios{
+        display: none;
+    }
+</style>
+<body>
+    <h2>Móduclo Desarrollo web entorno cliente</h2>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <label for="profesor">Profesor: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="profesor">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="usuario">Usuario: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="usuario" name="usuario" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="contrasena">Contraseña:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="contrasena" name="contrasena" required>
+                    </td>
+                </tr>
+            </table>
+        <div>
+            <button onclick="validarDatos()" type="submit">Iniciar Sesión</button>
+        </div>
+        <table id="criterios">
+            <thead>
+                <tr>
+                    <th colspan="4">Objetivo</th>
+                </tr>
+                <tr>
+                    <th>Ra</th>
+                    <th>Añadir RA</th>
+                    <th>Quitar RA</th>
+                    <th>Peso Ra</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Criterio</td>
+                    <td>Añadir Cr.</td>
+                    <td>Quitar Cr.</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Tipo Tarea</td>
+                    <td colspan="2">Nombre Tarea</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Contenido</td>
+                    <td>Nombre:</td>
+                    <td>Fuente:</td>
+                </tr>
+            </tbody>
+        </table>
+    <script src="script.js"></script>
+</body>
+</html>
