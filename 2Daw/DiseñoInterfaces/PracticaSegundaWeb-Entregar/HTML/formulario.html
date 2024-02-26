@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <meta name="description" content="Formulario del portfolio de Ismael Sánchez, desarrollador web Full-stack." />
     <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="../bootstrap/scss/bootstrap.scss">
     <link rel="stylesheet" href="../css/custom.css">
@@ -21,7 +21,7 @@
         <!-- place navbar here -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html"><img src="../Imágenes/logo_portfolio.png" alt="logo_web"
+                <a class="navbar-brand" href="./index.html"><img src="../Imágenes/logo_portfolio.webp" alt="logo_web"
                         class="logo"></a>
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
@@ -53,27 +53,43 @@
         <h1 class="logo">Contactar</h1>
         <div class="contenedor ">
             <div class="Contform">
-                <h3>Formulario de contacto</h3>
+                <h2>Formulario de contacto</h2>
                 <form action="">
                     <p>
-                        <label>Nombre </label>
-                        <input type="text" name="Nombre ">
+                        <label for="Nombre" >Nombre </label>
+                        <input type="text" id="Nombre">
                     </p>
                     <p>
-                        <label>Apellidos </label>
-                        <input type="text" name="apellidos">
+                        <label for="apellidos">Apellidos </label>
+                        <input type="text" id="apellidos">
                     </p>
                     <p>
-                        <label>Teléfono</label>
-                        <input type="tel" name="telefono">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono">
                     </p>
                     <p>
-                        <label>Correo electrónico</label>
-                        <input type="email" name="email">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email">
+                    </p>
+                    <p>
+                        <label for="fechaNac">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNac">
+                    </p>
+                    <p>
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro/Prefiero no decirlo</option>
+                        </select>
                     </p>
                     <p class="block">
-                        <label>Mensaje</label>
-                        <textarea name="Mensaje" rows="3"></textarea>
+                        <label for="Mensaje">Mensaje</label>
+                        <textarea id="Mensaje" rows="3"></textarea>
+                    </p>
+                    <p class="block">
+                        <label for="aceptarConds"></label>
+                        Aceptar condiciones de uso del sitio<input type="checkbox" name="condiciones" id="aceptarConds">
                     </p>
                     <p class="block">
                         <button>
@@ -83,7 +99,7 @@
                 </form>
             </div>
             <div class="Continfo">
-                <h4>Para más información</h4>
+                <h3>Para más información</h3>
                 <ul class="masInfo">
                     <li> El Ejido (Almería)</li>
                     <li> (+34) 624 32 62 64</li>

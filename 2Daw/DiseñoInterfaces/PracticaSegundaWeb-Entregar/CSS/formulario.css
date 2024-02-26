@@ -50,7 +50,7 @@ ul {
 
 .Contform form button,
 .Contform form input,
-.Contform form textarea {
+.Contform form textarea , select{
     width: 100%;
     padding: .7em;
     border: none;
@@ -59,7 +59,10 @@ ul {
     color: #fff;
     border-bottom: 1px solid #d63031;
 }
-
+select option {
+    background: none;
+    
+}
 .Contform form button {
     background: #B70E21;
     border: 0;
