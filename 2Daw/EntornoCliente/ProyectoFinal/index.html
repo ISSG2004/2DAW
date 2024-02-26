@@ -9,19 +9,14 @@
     #criterios{
         display: none;
     }
+    #logueo{
+        display: block;
+    }
 </style>
 <body>
-    <h2>Móduclo Desarrollo web entorno cliente</h2>
-        <div>
+    <h2>Módulo Desarrollo web entorno cliente</h2>
+        <div id="logueo">
             <table>
-                <tr>
-                    <td>
-                        <label for="profesor">Profesor: </label>
-                    </td>
-                    <td>
-                        <input type="text" id="profesor">
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <label for="usuario">Usuario: </label>
@@ -39,38 +34,39 @@
                     </td>
                 </tr>
             </table>
-        <div>
-            <button onclick="validarDatos()" type="submit">Iniciar Sesión</button>
+            <div>
+                <button onclick="validarDatos()" type="submit">Iniciar Sesión</button>
+            </div>
         </div>
-        <table id="criterios">
-            <thead>
+        <div id="criterios">
+            <table>
                 <tr>
-                    <th colspan="4">Objetivo</th>
+                    <td>
+                        <label for="profesor">Profesor: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="profesor"></label>
+                    </td>
                 </tr>
-                <tr>
-                    <th>Ra</th>
-                    <th>Añadir RA</th>
-                    <th>Quitar RA</th>
-                    <th>Peso Ra</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Criterio</td>
-                    <td>Añadir Cr.</td>
-                    <td>Quitar Cr.</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Tipo Tarea</td>
-                    <td colspan="2">Nombre Tarea</td>
-                </tr>
-                <tr>
-                    <td colspan="2">Contenido</td>
-                    <td>Nombre:</td>
-                    <td>Fuente:</td>
-                </tr>
-            </tbody>
-        </table>
+            </table>
+            <label for="raSelect">Selecciona un RA:</label>
+            <select id="raSelect">
+                <option value="RA1">RA1</option>
+                <option value="RA2">RA2</option>
+                <option value="RA3">RA3</option>
+                <option value="RA4">RA4</option>
+                <option value="RA5">RA5</option>
+                <option value="RA6">RA6</option>
+                <option value="RA7">RA7</option>
+            </select>
+            <select id="criterioSelect"></select>
+            <button onclick="mostrarDatosRA()">Cargar datos del RA</button>
+            <button>Añadir criterio</button>
+            <button>Eliminar criterio</button>
+            <div id="info"></div>
+            <div id="opcionSeleccionada"></div>
+            <button onclick="volver()">Volver a la pantalla de inicio de sesión</button>
+        </div>
     <script src="script.js"></script>
 </body>
 </html>
