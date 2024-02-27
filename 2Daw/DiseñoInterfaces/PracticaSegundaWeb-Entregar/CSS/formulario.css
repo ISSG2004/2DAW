@@ -51,8 +51,7 @@ ul {
 .Contform form button,
 .Contform form input,
 .Contform form textarea , 
-select,
-select option{
+select{
     width: 100%;
     padding: .7em;
     border: none;
@@ -62,7 +61,7 @@ select option{
     border-bottom: 1px solid #d63031;
 }
 
-.Contform form button {
+.Contform form .boton {
     background: #B70E21;
     border: 0;
     text-transform: uppercase;
@@ -70,8 +69,8 @@ select option{
     border-radius: 10px;
 }
 
-.Contform form button:hover,
-.Contform form button:focus {
+.Contform form .boton:hover,
+.Contform form .boton:focus {
     background: #d63031;
     color: #fff;
     transition: background-color 1s ease-out;

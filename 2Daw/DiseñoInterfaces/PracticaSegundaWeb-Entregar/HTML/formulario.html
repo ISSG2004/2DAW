@@ -57,19 +57,19 @@
                 <form action="">
                     <p>
                         <label for="Nombre" >Nombre </label>
-                        <input type="text" id="Nombre">
+                        <input type="text" id="Nombre" required aria-required="true" aria-label="Nombre">
                     </p>
                     <p>
                         <label for="apellidos">Apellidos </label>
-                        <input type="text" id="apellidos">
+                        <input type="text" id="apellidos" required aria-required="true" aria-label="apellidos">
                     </p>
                     <p>
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono">
+                        <input type="tel" id="telefono" required aria-required="true" aria-label="teléfono">
                     </p>
                     <p>
                         <label for="email">Correo electrónico</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" required aria-required="true" aria-label="Correo electrónico">
                     </p>
                     <p>
                         <label for="fechaNac">Fecha de nacimiento</label>
@@ -88,13 +88,13 @@
                         <textarea id="Mensaje" rows="3"></textarea>
                     </p>
                     <p class="block">
-                        <label for="aceptarConds"></label>
-                        Aceptar condiciones de uso del sitio<input type="checkbox" name="condiciones" id="aceptarConds">
+                        <label for="sitCiv">Situacion Civil</label>
+                        <input type="radio" name="sitCiv" id="" >
+                        <input type="radio" name="sitCiv" id="">
+                        <input type="radio" name="sitCiv" id="">
                     </p>
                     <p class="block">
-                        <button>
-                            Enviar mensaje
-                        </button>
+                        <div class="boton" role="button" aria-label="Enviar formulario">Enviar mensaje</div>
                     </p>
                 </form>
             </div>
@@ -105,10 +105,8 @@
                     <li> (+34) 624 32 62 64</li>
                     <li> ismaelsanchez.g20@gmail.com</li>
                 </ul>
-
             </div>
         </div>
-
         </div>
     </main>
     <!--footer-->
