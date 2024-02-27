@@ -77,3 +77,5 @@ function borrarCampoDespuesDe10Segundos(profesor) {
     }, 10000); // 10000 milisegundos = 10 segundos
 }
 profesor.addEventListener('mouseout', borrarCampoDespuesDe10Segundos);
+
+

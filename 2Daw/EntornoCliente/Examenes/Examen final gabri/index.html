@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen RA5</title>
+</head>
+<style>
+    #botonLogin{
+        display: block;
+    }
+    #botonIdioma{
+        display: none;
+    }
+    #botonSalir{
+        display: none;
+    }
+</style>
+<body>
+    <h1>Registro de datos de usuario</h1>
+    <label for="nombre" id="txtNombre">Nombre: </label>
+    <input type="text" id="nombre">
+    <br>
+    <label for="apellidos" id="txtApellidos">Apellido: </label>
+    <input type="text" id="apellidos">
+    <br>
+    <label for="codVer" id="txtCodVer">Codigo verificacion: </label>
+    <input type="text" id="codVer">
+    <br>
+    <br>
+    <br>
+    <h1>Acceso al área de administrador</h1>
+    <label for="usuario" id="txtUsuario">Nombre de usuario: </label>
+    <input type="text" id="usuario">
+    <br>
+    <label for="contrasena" id="txtContrasena">Contraseña: </label>
+    <input type="password" id="contrasena">
+    <br>
+    <button type="button" onclick="iniciarSesion()" id="botonLogin">Enviar datos de inicio de sesion</button>
+    <button type="button" onclick="cambiarIdioma()" id="botonIdioma">Cambiar a ingles</button>
+    <button type="button" id="botonSalir" onclick="salirZonaAdmin()">Salir</button>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+
