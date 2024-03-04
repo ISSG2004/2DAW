@@ -17,42 +17,55 @@ function cargarTablaCriterios() {
 }
 //acceder JSON
 function mostrarDatosRA() {
-    var resultado = document.getElementById("info");
-    var selectRA = document.getElementById("raSelect").value;
-    var criterioSelect = document.getElementById("criterioSelect");
-    var opcionSeleccionadaDiv = document.getElementById("opcionSeleccionada"); // Nuevo div
-    resultado.innerHTML = ""; // Limpiar el contenido previo
-    opcionSeleccionadaDiv.innerHTML = ""; // Limpiar contenido previo
+    // Obtener referencias a elementos del DOM
+    var resultado = document.getElementById("info"); // Se obtiene una referencia al elemento con el id "info"
+    var selectRA = document.getElementById("raSelect").value; // Se obtiene el valor seleccionado del elemento con el id "raSelect"
+    var criterioSelect = document.getElementById("criterioSelect"); // Se obtiene una referencia al elemento con el id "criterioSelect"
+    var opcionSeleccionadaDiv = document.getElementById("opcionSeleccionada"); // Se obtiene una referencia al elemento con el id "opcionSeleccionada"
+
+    // Limpiar el contenido previo de los elementos
+    resultado.innerHTML = ""; // Se limpia el contenido del elemento "resultado"
+    opcionSeleccionadaDiv.innerHTML = ""; // Se limpia el contenido del elemento "opcionSeleccionadaDiv"
+
+    // Verificar si se ha seleccionado un valor en el elemento raSelect
     if (selectRA !== "") {
+        // Crear una instancia de XMLHttpRequest
         var xmlhttp;
         if (window.XMLHttpRequest) {
-            xmlhttp = new XMLHttpRequest();
+            xmlhttp = new XMLHttpRequest(); // Se crea una instancia de XMLHttpRequest para navegadores modernos
         } else {
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); // Se crea una instancia de XMLHttpRequest para versiones antiguas de Internet Explorer
         }
+        // Definir la función que se ejecutará cuando cambie el estado de la solicitud
         xmlhttp.onreadystatechange = function () {
+            // Verificar si la solicitud se ha completado y la respuesta está lista
             if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                var datos = JSON.parse(xmlhttp.responseText);
+                // Parsear la respuesta JSON
+                var datos = JSON.parse(xmlhttp.responseText); // Se convierte la respuesta JSON en un objeto JavaScript
+                // Iterar sobre los datos obtenidos
                 for (var i in datos) {
                     for (var j = 0; j < datos[i].length; j++) {
+                        // Verificar si el id coincide con la opción seleccionada
                         if (datos[i][j].id === selectRA) {
-                            resultado.innerHTML += "<h1>"+datos[i][j].id+"</h1>" + "<br/>";
-                            resultado.innerHTML += "Título RA: " + datos[i][j].textoRA + "<br/>";
-                            resultado.innerHTML += "Criterios: " + "<br/>";
-                            var criterios = datos[i][j].criterios;
-                            criterioSelect.innerHTML = ""; // Limpiar opciones previas
-                            for (var k in criterios) {
-                                var option = document.createElement('option');
-                                option.text = criterios[k];
-                                criterioSelect.add(option);
+                            // Mostrar información relevante en el elemento resultado
+                            resultado.innerHTML += "<h1>"+datos[i][j].id+"</h1>" + "<br/>"; // Se agrega el id como título
+                            resultado.innerHTML += "Título RA: " + datos[i][j].textoRA + "<br/>"; // Se agrega el textoRA como título RA
+                            resultado.innerHTML += "Criterios: " + "<br/>"; // Se agrega un título para los criterios
+                            // Limpiar opciones previas y agregar nuevas opciones al elemento criterioSelect
+                            criterioSelect.innerHTML = ""; // Se limpian las opciones anteriores del criterioSelect
+                            for (var k in datos[i][j].criterios) {
+                                var option = document.createElement('option'); // Se crea un elemento de opción
+                                option.text = datos[i][j].criterios[k]; // Se establece el texto de la opción
+                                criterioSelect.add(option); // Se agrega la opción al elemento criterioSelect
                             }
                         }
                     }
                 }
             }
         }
-        xmlhttp.open("GET", "ArchivoFOL.json", true);
-        xmlhttp.send();
+        // Iniciar la solicitud XMLHttpRequest
+        xmlhttp.open("GET", "ArchivoFOL.json", true); // Se configura la solicitud para obtener el archivo JSON
+        xmlhttp.send(); // Se envía la solicitud
     }
 }
 
@@ -69,6 +82,8 @@ document.getElementById("criterioSelect").onchange = mostrarOpcionSeleccionada;
 function volver(){
     document.getElementById("criterios").style.display="none";
     document.getElementById("logueo").style.display="block";
+    location.reload();
+
 }
 function borrarCampoDespuesDe10Segundos(profesor) {
     setTimeout(function() {
