@@ -146,6 +146,7 @@ function generarPDF() {
     //añadimos las imagenes al documento
     doc.addImage(imgJunta, "JPEG", 5, 5, 50, 32);
     doc.addImage(imgMurgi, "PNG", 162, 8, 40, 38); 
+    doc.text("Formacion y Orientación Laboral",50,50)
     doc.text(nombreProfe,60,70);
     doc.text(nombreTarea,50,80);
     doc.setFontSize(10);
