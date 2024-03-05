@@ -68,12 +68,32 @@
             <button onclick="mostrarDatosRA()">Cargar datos del RA</button>
             <button onclick="añadirCriterio()">Añadir criterio</button>
             <button onclick="eliminarCriterio()">Eliminar criterio</button>
+            <br>
+            <br>
+            <label for="tarea">Nombre tarea: </label>
+            <input type="text" id="tarea">
+            <button onclick="asignarNombre()">Asignar nombre de tarea</button>
+            <button onclick="borrarNombre()">Eliminar nombre de tarea</button>
+            <select id="tipoTarea">
+                <option value="Test">Test</option>
+                <option value="Prueba escrita">Prueba escrita</option>
+                <option value="Trabajo">Trabajo</option>
+                <option value="Prueba práctica">Prueba práctica</option>
+                <option value="Prueba Teórico-práctica">Prueba Teórico-práctica</option>
+                <option value="Proyecto">Proyecto</option>
+            </select>
+            <button onclick="seleccionarTipo()">Seleccionar tipo de tarea</button>
+            <br>
+            <br>
             <div id="info"></div>
+            <h1>Nombre tarea: <span id="nombreTarea"></span> de tipo <span id="tipoTareaMostrar"></span> </h1>
             <div id="opcionSeleccionada"></div>
             <div id="criteriosSeleccionados"></div>
             <button onclick="generarPDF()" id="btnPDF">Generar PDF</button>
             <button onclick="volver()">Volver a la pantalla de inicio de sesión</button>
         </div>
     <script src="script.js"></script>
+    <script src="./jsPDF.js"></script>
+    <script src="./jspdf.plugin.autotable.js"></script>
 </body>
 </html>
