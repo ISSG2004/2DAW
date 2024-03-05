@@ -6,15 +6,18 @@
     <title>Document</title>
 </head>
 <style>
-    #criterios{
+    #criterios,#btnPDF{
         display: none;
     }
     #logueo{
         display: block;
     }
+    #btnProfesor{
+        display: block;
+    }
 </style>
 <body>
-    <h2>Módulo Desarrollo web entorno cliente</h2>
+    <h2>Módulo Formación y orientación Laboral</h2>
         <div id="logueo">
             <table>
                 <tr>
@@ -45,10 +48,12 @@
                         <label for="profesor">Profesor: </label>
                     </td>
                     <td>
-                        <input type="text" id="profesor"></label>
+                        <input type="text" id="profesor">
+                        <input type="button" value="Guardar nombre del profesor" onclick="guardarNombre()" id="btnProfesor">
                     </td>
                 </tr>
             </table>
+            <h1 id="nombreProfesor"></h1>
             <label for="raSelect">Selecciona un RA:</label>
             <select id="raSelect">
                 <option value="RA1">RA1</option>
@@ -61,10 +66,12 @@
             </select>
             <select id="criterioSelect"></select>
             <button onclick="mostrarDatosRA()">Cargar datos del RA</button>
-            <button>Añadir criterio</button>
-            <button>Eliminar criterio</button>
+            <button onclick="añadirCriterio()">Añadir criterio</button>
+            <button onclick="eliminarCriterio()">Eliminar criterio</button>
             <div id="info"></div>
             <div id="opcionSeleccionada"></div>
+            <div id="criteriosSeleccionados"></div>
+            <button onclick="generarPDF()" id="btnPDF">Generar PDF</button>
             <button onclick="volver()">Volver a la pantalla de inicio de sesión</button>
         </div>
     <script src="script.js"></script>

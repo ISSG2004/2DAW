@@ -1,4 +1,6 @@
-var profesor=document.getElementById("profesor").value;
+//variables globales
+var opcionSeleccionada;
+var profesor;
 function validarDatos(){
     var usuario=document.getElementById("usuario").value;
     var contrasena=document.getElementById("contrasena").value;
@@ -71,7 +73,7 @@ function mostrarDatosRA() {
 
 // Función para mostrar la opción seleccionada en pantalla
 function mostrarOpcionSeleccionada() {
-    var opcionSeleccionada = document.getElementById("criterioSelect").value;
+    opcionSeleccionada = document.getElementById("criterioSelect").value;
     var opcionSeleccionadaDiv = document.getElementById("opcionSeleccionada");
     opcionSeleccionadaDiv.innerHTML ="<h1>Criterio seleccionado: </h1>"+ opcionSeleccionada;
 }
@@ -85,12 +87,28 @@ function volver(){
     location.reload();
 
 }
-function borrarCampoDespuesDe10Segundos(profesor) {
+//nombre del profesor
+function guardarNombre(){
+    profesor=document.getElementById("profesor").value;
+    document.getElementById("nombreProfesor").innerHTML=profesor;
+    document.getElementById("btnProfesor").style.display="none";
     setTimeout(function() {
-        var campo = document.getElementById(profesor);
-        campo.value = ""; // Borrar el contenido del campo
-    }, 10000); // 10000 milisegundos = 10 segundos
+        document.getElementById("nombreProfesor").innerHTML = "";
+        document.getElementById("btnProfesor").style.display="block";
+    }, 60000);
 }
-profesor.addEventListener('mouseout', borrarCampoDespuesDe10Segundos);
 
+//añadir criterios
+function añadirCriterio(){
+    document.getElementById("criteriosSeleccionados").innerHTML+=opcionSeleccionada+"<br>";
+}
+function eliminarCriterio(){
+    document.getElementById("criteriosSeleccionados").innerHTML="";
+}
+//generarPDF
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
+function generarPDF(){
+    var doc = new jsPDF();
+    doc.save("Criterios.pdf");
+}

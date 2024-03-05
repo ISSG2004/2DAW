@@ -4,13 +4,13 @@
         "id": "RA1",
         "textoRA": "Selecciona oportunidades de empleo, identificando las diferentes posibilidades de inserción, y las alternativas de aprendizaje a lo largo de la vida.",
         "criterios": {
-          "a": "Se han identificado los principales yacimientos de empleo y de inserción laboral para el Técnico Superior en Desarrollo de Aplicaciones Web.",
-          "b": "Se han determinado las aptitudes y actitudes requeridas para la actividad profesional relacionada con el perfil del título.",
-          "c": "Se han identificado los itinerarios formativos-profesionales relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Web.",
-          "d": "Se ha valorado la importancia de la formación permanente como factor clave para la empleabilidad y la adaptación a las exigencias del proceso productivo.",
-          "e": "Se ha realizado la valoración de la personalidad, aspiraciones, actitudes y formación propia para la toma de decisiones.",
-          "f": "Se han determinado las técnicas utilizadas en el proceso de búsqueda de empleo.",
-          "g": "Se han previsto las alternativas de autoempleo en los sectores profesionales relacionados con el título."
+          "a": "RA1a- Se han identificado los principales yacimientos de empleo y de inserción laboral para el Técnico Superior en Desarrollo de Aplicaciones Web.",
+          "b": "RA1b- Se han determinado las aptitudes y actitudes requeridas para la actividad profesional relacionada con el perfil del título.",
+          "c": "RA1c- Se han identificado los itinerarios formativos-profesionales relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Web.",
+          "d": "RA1d- Se ha valorado la importancia de la formación permanente como factor clave para la empleabilidad y la adaptación a las exigencias del proceso productivo.",
+          "e": "RA1e- Se ha realizado la valoración de la personalidad, aspiraciones, actitudes y formación propia para la toma de decisiones.",
+          "f": "RA1f- Se han determinado las técnicas utilizadas en el proceso de búsqueda de empleo.",
+          "g": "RA1g- Se han previsto las alternativas de autoempleo en los sectores profesionales relacionados con el título."
         },
         "peso": "20%"
       },
@@ -18,13 +18,13 @@
         "id": "RA2",
         "textoRA": "Aplica las estrategias del trabajo en equipo, valorando su eficacia y eficiencia para la consecución de los objetivos de la organización.",
         "criterios": {
-          "a": "Se han valorado las ventajas de trabajo en equipo en situaciones de trabajo relacionadas con el perfil del Técnico Superior en Desarrollo de Aplicaciones Web.",
-          "b": "Se han identificado los equipos de trabajo que pueden constituirse en una situación real de trabajo.",
-          "c": "Se han determinado las características del equipo de trabajo eficaz frente a los equipos ineficaces.",
-          "d": "Se ha valorado positivamente la necesaria existencia de diversidad de roles y opiniones asumidos por los miembros de un equipo.",
-          "e": "Se ha reconocido la posible existencia de conflicto entre los miembros de un grupo como un aspecto característico de las organizaciones.",
-          "f": "Se han identificado los tipos de conflictos y sus fuentes.",
-          "g": "Se han determinado procedimientos para la resolución del conflicto."
+          "a": "RA2a- Se han valorado las ventajas de trabajo en equipo en situaciones de trabajo relacionadas con el perfil del Técnico Superior en Desarrollo de Aplicaciones Web.",
+          "b": "RA2b- Se han identificado los equipos de trabajo que pueden constituirse en una situación real de trabajo.",
+          "c": "RA2c- Se han determinado las características del equipo de trabajo eficaz frente a los equipos ineficaces.",
+          "d": "RA2d- Se ha valorado positivamente la necesaria existencia de diversidad de roles y opiniones asumidos por los miembros de un equipo.",
+          "e": "RA2e- Se ha reconocido la posible existencia de conflicto entre los miembros de un grupo como un aspecto característico de las organizaciones.",
+          "f": "RA2f- Se han identificado los tipos de conflictos y sus fuentes.",
+          "g": "RA2g- Se han determinado procedimientos para la resolución del conflicto."
         },
         "peso": "15%"
       },
@@ -32,16 +32,16 @@
         "id": "RA3",
         "textoRA": "Ejerce los derechos y cumple las obligaciones que se derivan de las relaciones laborales, reconociéndolas en los diferentes contratos de trabajo.",
         "criterios": {
-          "a": "Se han identificado los conceptos básicos del derecho del trabajo.",
-          "b": "Se han distinguido los principales organismos que intervienen en las relaciones entre empresarios y trabajadores.",
-          "c": "Se han determinado los derechos y obligaciones derivados de la relación laboral.",
-          "d": "Se han clasificado las principales modalidades de contratación, identificando las medidas de fomento de la contratación para determinados colectivos.",
-          "e": "Se han valorado las medidas establecidas por la legislación vigente para la conciliación de la vida laboral y familiar.",
-          "f": "Se han identificado las características definitorias de los nuevos entornos de organización del trabajo.",
-          "g": "Se ha analizado el recibo de salarios, identificando los principales elementos que lo integran.",
-          "h": "Se han identificado las causas y efectos de la modificación, suspensión y extinción de la relación laboral.",
-          "i": "Se han determinado las condiciones de trabajo pactadas en un convenio colectivo aplicable a un sector profesional relacionado con el título de Técnico Superior en Desarrollo de Aplicaciones Web.",
-          "j": "Se han analizado las diferentes medidas de conflicto colectivo y los procedimientos de solución de conflictos."
+          "a": "RA3a- Se han identificado los conceptos básicos del derecho del trabajo.",
+          "b": "RA3b- Se han distinguido los principales organismos que intervienen en las relaciones entre empresarios y trabajadores.",
+          "c": "RA3c- Se han determinado los derechos y obligaciones derivados de la relación laboral.",
+          "d": "RA3d- Se han clasificado las principales modalidades de contratación, identificando las medidas de fomento de la contratación para determinados colectivos.",
+          "e": "RA3e- Se han valorado las medidas establecidas por la legislación vigente para la conciliación de la vida laboral y familiar.",
+          "f": "RA3f- Se han identificado las características definitorias de los nuevos entornos de organización del trabajo.",
+          "g": "RA3g- Se ha analizado el recibo de salarios, identificando los principales elementos que lo integran.",
+          "h": "RA3h- Se han identificado las causas y efectos de la modificación, suspensión y extinción de la relación laboral.",
+          "i": "RA3i- Se han determinado las condiciones de trabajo pactadas en un convenio colectivo aplicable a un sector profesional relacionado con el título de Técnico Superior en Desarrollo de Aplicaciones Web.",
+          "j": "RA3j- Se han analizado las diferentes medidas de conflicto colectivo y los procedimientos de solución de conflictos."
         },
         "peso": "25%"
       },
@@ -49,14 +49,14 @@
         "id": "RA4",
         "textoRA": "Determina la acción protectora del sistema de la seguridad social ante las distintas contingencias cubiertas, identificando las distintas clases de prestaciones.",
         "criterios": {
-          "a": "Se ha valorado el papel de la seguridad social como pilar esencial para la mejora de la calidad de vida de los ciudadanos.",
-          "b": "Se han enumerado las diversas contingencias que cubre el sistema de seguridad Social.",
-          "c": "Se han identificado los regímenes existentes en el sistema de la seguridad social.",
-          "d": "Se han identificado las obligaciones de empresario y trabajador dentro del sistema de seguridad social.",
-          "e": "Se han identificado en un supuesto sencillo las bases de cotización de un trabajador y las cuotas correspondientes a trabajador y empresario.",
-          "f": "Se han clasificado las prestaciones del sistema de seguridad social, identificando los requisitos.",
-          "g": "Se han determinado las posibles situaciones legales de desempleo en supuestos prácticos sencillos.",
-          "h": "Se ha realizado el cálculo de la duración y cuantía de una prestación por desempleo de nivel contributivo básico."
+          "a": "RA4a- Se ha valorado el papel de la seguridad social como pilar esencial para la mejora de la calidad de vida de los ciudadanos.",
+          "b": "RA4b- Se han enumerado las diversas contingencias que cubre el sistema de seguridad Social.",
+          "c": "RA4c- Se han identificado los regímenes existentes en el sistema de la seguridad social.",
+          "d": "RA4d- Se han identificado las obligaciones de empresario y trabajador dentro del sistema de seguridad social.",
+          "e": "RA4e- Se han identificado en un supuesto sencillo las bases de cotización de un trabajador y las cuotas correspondientes a trabajador y empresario.",
+          "f": "RA4f- Se han clasificado las prestaciones del sistema de seguridad social, identificando los requisitos.",
+          "g": "RA4g- Se han determinado las posibles situaciones legales de desempleo en supuestos prácticos sencillos.",
+          "h": "RA4h- Se ha realizado el cálculo de la duración y cuantía de una prestación por desempleo de nivel contributivo básico."
         },
         "peso": "15%"
       },
@@ -64,13 +64,13 @@
         "id": "RA5",
         "textoRA": "Evalúa los riesgos derivados de su actividad, analizando las condiciones de trabajo y los factores de riesgo presentes en su entorno laboral.",
         "criterios": {
-          "a": "Se ha valorado la importancia de la cultura preventiva en todos los ámbitos y actividades de la empresa.",
-          "b": "Se han relacionado las condiciones laborales con la salud del trabajador.",
-          "c": "Se han clasificado los factores de riesgo en la actividad y los daños derivados de los mismos.",
-          "d": "Se han identificado las situaciones de riesgo más habituales en los entornos de trabajo del Técnico Superior en Desarrollo de Aplicaciones Web.",
-          "e": "Se ha determinado la evaluación de riesgos en la empresa.",
-          "f": "Se han determinado las condiciones de trabajo con significación para la prevención en los entornos de trabajo relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Web.",
-          "g": "Se han clasificado y descrito los tipos de daños profesionales, con especial referencia a accidentes de trabajo y enfermedades profesionales, relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Web."
+          "a": "RA5a- Se ha valorado la importancia de la cultura preventiva en todos los ámbitos y actividades de la empresa.",
+          "b": "RA5b- Se han relacionado las condiciones laborales con la salud del trabajador.",
+          "c": "RA5c- Se han clasificado los factores de riesgo en la actividad y los daños derivados de los mismos.",
+          "d": "RA5d- Se han identificado las situaciones de riesgo más habituales en los entornos de trabajo del Técnico Superior en Desarrollo de Aplicaciones Web.",
+          "e": "RA5e- Se ha determinado la evaluación de riesgos en la empresa.",
+          "f": "RA5f- Se han determinado las condiciones de trabajo con significación para la prevención en los entornos de trabajo relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Web.",
+          "g": "RA5g- Se han clasificado y descrito los tipos de daños profesionales, con especial referencia a accidentes de trabajo y enfermedades profesionales, relacionados con el perfil profesional del Técnico Superior en Desarrollo de Aplicaciones Web."
         },
         "peso": "10%"
       },
@@ -78,13 +78,13 @@
         "id": "RA6",
         "textoRA": "Participa en la elaboración de un plan de prevención de riesgos en la empresa, identificando las responsabilidades de todos los agentes implicados.",
         "criterios": {
-          "a": "Se han determinado los principales derechos y deberes en materia de prevención de riesgos laborales.",
-          "b": "Se han clasificado las distintas formas de gestión de la prevención en la empresa, en función de los distintos criterios establecidos en la normativa sobre prevención de riesgos laborales.",
-          "c": "Se han determinado las formas de representación de los trabajadores en la empresa en materia de prevención de riesgos.",
-          "d": "Se han identificado los organismos públicos relacionados con la prevención de riesgos laborales.",
-          "e": "Se ha valorado la importancia de la existencia de un plan preventivo en la empresa que incluya la secuenciación de actuaciones a realizar en caso de emergencia.",
-          "f": "Se ha definido el contenido del plan de prevención en un centro de trabajo relacionado con el sector profesional del Técnico Superior en Desarrollo de Aplicaciones Web.",
-          "g": "Se ha proyectado un plan de emergencia y evacuación de una empresa del sector."
+          "a": "RA6a- Se han determinado los principales derechos y deberes en materia de prevención de riesgos laborales.",
+          "b": "RA6b- Se han clasificado las distintas formas de gestión de la prevención en la empresa, en función de los distintos criterios establecidos en la normativa sobre prevención de riesgos laborales.",
+          "c": "RA6c- Se han determinado las formas de representación de los trabajadores en la empresa en materia de prevención de riesgos.",
+          "d": "RA6d- Se han identificado los organismos públicos relacionados con la prevención de riesgos laborales.",
+          "e": "RA6e- Se ha valorado la importancia de la existencia de un plan preventivo en la empresa que incluya la secuenciación de actuaciones a realizar en caso de emergencia.",
+          "f": "RA6f- Se ha definido el contenido del plan de prevención en un centro de trabajo relacionado con el sector profesional del Técnico Superior en Desarrollo de Aplicaciones Web.",
+          "g": "RA6g- Se ha proyectado un plan de emergencia y evacuación de una empresa del sector."
         },
         "peso": "15%"
       },
@@ -92,12 +92,12 @@
         "id": "RA7",
         "textoRA": "Aplica las medidas de prevención y protección, analizando las situaciones de riesgo en el entorno laboral del Técnico Superior en Desarrollo de Aplicaciones Web.",
         "criterios": {
-          "a": "Se han definido las técnicas de prevención y de protección que deben aplicarse para evitar los daños en su origen y minimizar sus consecuencias en caso de que sean inevitables.",
-          "b": "Se ha analizado el significado y alcance de los distintos tipos de señalización de seguridad.",
-          "c": "Se han analizado los protocolos de actuación en caso de emergencia.",
-          "d": "Se han identificado las técnicas de clasificación de heridos en caso de emergencia donde existan víctimas de diversa gravedad.",
-          "e": "Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños y la composición y uso del botiquín.",
-          "f": "Se han determinado los requisitos y condiciones para la vigilancia de la salud del trabajador y su importancia como medida de prevención."
+          "a": "RA7a- Se han definido las técnicas de prevención y de protección que deben aplicarse para evitar los daños en su origen y minimizar sus consecuencias en caso de que sean inevitables.",
+          "b": "RA7b- Se ha analizado el significado y alcance de los distintos tipos de señalización de seguridad.",
+          "c": "RA7c- Se han analizado los protocolos de actuación en caso de emergencia.",
+          "d": "RA7d- Se han identificado las técnicas de clasificación de heridos en caso de emergencia donde existan víctimas de diversa gravedad.",
+          "e": "RA7e- Se han identificado las técnicas básicas de primeros auxilios que han de ser aplicadas en el lugar del accidente ante distintos tipos de daños y la composición y uso del botiquín.",
+          "f": "RA7f- Se han determinado los requisitos y condiciones para la vigilancia de la salud del trabajador y su importancia como medida de prevención."
         },
         "peso": "10%"
       }
