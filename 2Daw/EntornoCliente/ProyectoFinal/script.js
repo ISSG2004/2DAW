@@ -157,7 +157,7 @@ function generarPDF() {
             doc.addPage();
             spaceLeft = doc.internal.pageSize.height - margin;
         }
-        doc.text(lines,"7",ejeY);
+        doc.text(lines,"10",ejeY);
         ejeY=ejeY+10;//incrementamos las cordenadas de Y
     }
     doc.save("Criterios.pdf");
