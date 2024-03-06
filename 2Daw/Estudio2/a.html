@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Practica RA4_abcde - 2 RecuperaciónPablo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="a.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .ventana {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Ventana 1</h2>
+    <button onclick="abrirVentana1()">Abrir Ventana 1</button>
+    <button onclick="cerrarVentana('ventana1')">Cerrar Ventana 1</button>
+
+
+    <h2>Ventana 2</h2>
+    <button onclick="abrirVentana2()">Abrir Ventana 2</button>
+    <button onclick="cerrarVentana('ventana2')">Cerrar Ventana 2</button>
+    
+
+    <h2>Seleccionar número del 5 al 10</h2>
+    <label for="lista1">Selecciona un número:</label>
+    <select id="lista1">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <button onclick="generarAleatorios()">Generar Aleatorios</button>
+</body>
+</html>
