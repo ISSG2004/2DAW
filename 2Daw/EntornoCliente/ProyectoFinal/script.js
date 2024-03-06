@@ -135,7 +135,7 @@ function generarPDF() {
     var ejeY=100;
     var nombreProfe="El nombre del profesor es "+document.getElementById("nombreProfesor").innerHTML;
     var tipoTarea=document.getElementById("tipoTareaMostrar").innerHTML;
-    var nombreTarea="El nombre de la tarea es "+document.getElementById("nombreTarea").innerHTML+" "+tipoTarea;
+    var nombreTarea="El nombre de la tarea es "+document.getElementById("nombreTarea").innerHTML+", siendo esta "+tipoTarea;
     var maxTextWidth = 180; // Ancho máximo permitido en la página, en unidades de medida de jsPDF
     var margin = 10; // Márgen superior para comenzar a escribir el texto
 
@@ -148,8 +148,8 @@ function generarPDF() {
     doc.addImage(imgMurgi, "PNG", 162, 8, 40, 38); 
     doc.text("Formacion y Orientación Laboral",50,50)
     doc.text(nombreProfe,60,70);
-    doc.text(nombreTarea,50,80);
     doc.setFontSize(10);
+    doc.text("Criterios calificados en la practica",80,10)
     for (var key in criteriosSeleccionados) {
         lines= doc.splitTextToSize((criteriosSeleccionados[key]), maxTextWidth);
         // Calcula el espacio restante en la página
@@ -161,5 +161,6 @@ function generarPDF() {
         doc.text(lines,"10",ejeY);
         ejeY=ejeY+10;//incrementamos las cordenadas de Y
     }
+    doc.text(nombreTarea,50,ejeY);
     doc.save("Criterios.pdf");
 }
