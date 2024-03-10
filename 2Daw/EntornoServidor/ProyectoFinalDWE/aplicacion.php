@@ -25,8 +25,6 @@ list($usuario, $horaConexion) = obtenerDatosUsuario();
     <p>Conectado desde: <?php echo $horaConexion; ?></p>
     <h3>Menú:</h3>
     <ul>
-        <li><a href="informacion.php">Información</a></li>
-        <li><a href="preferencias.php">Preferencias</a></li>
         <li><a href="logout.php">Desconectar</a></li>
     </ul>
 </body>
