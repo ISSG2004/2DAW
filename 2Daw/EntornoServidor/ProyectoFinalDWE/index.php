@@ -1,23 +1,22 @@
 <?php
-include 'funciones.inc';
-session_start();
-
-// Función para conectar a la base de datos
-conectarBD();
-// Función para autenticar al usuario
-autenticarUsuario($usuario, $contrasena);
-// Verificar si el formulario ha sido enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST['invitado'])) {
-        $_SESSION['usuario'] = 'Invitado';
-        header("Location: informacion.php");
-        exit();
-    } else {
-        $usuario = $_POST['usuario'];
-        $contrasena = $_POST['contrasena'];
-        autenticarUsuario($usuario, $contrasena);
+    include 'funciones.php';
+    session_start();
+    // Función para conectar a la base de datos
+    conectarBD();
+    // Función para autenticar al usuario
+    autenticarUsuario($usuario, $contrasena);
+    // Verificar si el formulario ha sido enviado
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if(isset($_POST['invitado'])) {
+            $_SESSION['usuario'] = 'Invitado';
+            header("Location: informacion.php");
+            exit();
+        } else {
+            $usuario = $_POST['usuario'];
+            $contrasena = $_POST['contrasena'];
+            autenticarUsuario($usuario, $contrasena);
+        }
     }
-}
 ?>
 
 <!DOCTYPE html>
