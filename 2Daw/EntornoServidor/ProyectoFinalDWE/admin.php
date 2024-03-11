@@ -47,7 +47,7 @@ if (verificarSesion()==true){
             $biografiaPiloto = $_POST['biografia'];
             
             // Procesar la imagen
-            $directorioImagenes = 'imagenes/';
+            $directorioImagenes = './imagenes/';
             $nombreArchivo = $_FILES['imagen']['name'];
             $rutaTemporal = $_FILES['imagen']['tmp_name'];
             $rutaDestino = $directorioImagenes . $nombreArchivo;
