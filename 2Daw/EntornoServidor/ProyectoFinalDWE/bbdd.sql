@@ -18,7 +18,7 @@ CREATE TABLE usuarios (
 
 -- Crear la tabla de pilotos
 CREATE TABLE pilotos (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nombre_piloto VARCHAR(100) NOT NULL,
     ruta_imagen VARCHAR(255) NOT NULL,
     FOREIGN KEY (id) REFERENCES usuarios(id) ON DELETE CASCADE

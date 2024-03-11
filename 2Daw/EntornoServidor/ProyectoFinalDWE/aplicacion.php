@@ -1,16 +1,21 @@
 <?php
-include 'funciones.inc';
 session_start();
 
-// Verificar si el usuario ha iniciado sesión
-if (!isset($_SESSION['usuario'])) {
-    header("Location: index.php");
-    exit();
+function verificarSesion() {
+    // Verificar si existe una sesión activa
+    if(isset($_SESSION['username'])) {
+        //verificar tipo de usuario
+        if ($_SESSION['tipo']=='admin') {
+            return false;//si el usuario es de tipo admin no iniciamos sesion
+        } else {
+            return true;//si no lo es iniciamos
+        }
+    } else {
+        // Sesión no iniciada
+        return false;
+    }
 }
 
-// Función para obtener el nombre de usuario y la hora de conexión
-obtenerDatosUsuario();
-list($usuario, $horaConexion) = obtenerDatosUsuario();
 ?>
 
 <!DOCTYPE html>
@@ -18,12 +23,10 @@ list($usuario, $horaConexion) = obtenerDatosUsuario();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación</title>
+    <title>Pagina aplicacion</title>
 </head>
 <body>
-    <h2>Bienvenido, <?php echo $usuario; ?>!</h2>
-    <p>Conectado desde: <?php echo $horaConexion; ?></p>
-    <h3>Menú:</h3>
+    <h1>Esta es la página de usuarios</h1>
     <ul>
         <li><a href="logout.php">Desconectar</a></li>
     </ul>

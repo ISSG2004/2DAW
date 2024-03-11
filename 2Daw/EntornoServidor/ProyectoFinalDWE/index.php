@@ -1,61 +1,39 @@
 <?php
 session_start();
 
-// Función para conectar a la base de datos
-function conectarBD() {
-    $host = "localhost";
-    $usuario = "usu4";
-    $contrasena = "usu4";
-    $bd = "tarea4";
+// Configuración de la conexión a la base de datos
+$servername = "localhost";
+$username = "dwes";
+$password = "abc123.";
+$database = "pilotosF1";
 
-    $conexion = new mysqli($host, $usuario, $contrasena, $bd);
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $database);
 
-    if ($conexion->connect_error) {
-        die("Error de conexión: " . $conexion->connect_error);
-    }
-
-    return $conexion;
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Función para autenticar al usuario
-function autenticarUsuario($usuario, $contrasena) {
-    $conexion = conectarBD();
-    
-    // Escapar los valores para evitar inyección SQL
-    $usuario = $conexion->real_escape_string($usuario);
-    
-    $consulta = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
-    $resultado = $conexion->query($consulta);
-    
-    if ($resultado->num_rows > 0) {
-        $fila = $resultado->fetch_assoc();
-        $pwd_hash = $fila['pwd'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM usuarios WHERE nombre_usuario='$username' AND contrasena='$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        $_SESSION['username'] = $username;
+        $_SESSION['tipo'] = $row['tipo'];
         
-        // Verificar si la contraseña es correcta usando password_verify
-        if (password_verify($contrasena, $pwd_hash)) {
-            $_SESSION['usuario'] = $usuario;
+        if ($row['tipo'] == 'admin') {
+            header("Location: admin.php");
+        } elseif ($row['tipo'] == 'normal') {
             header("Location: aplicacion.php");
-            exit();
-        } else {
-            echo "Contraseña incorrecta.";
         }
     } else {
-        echo "Usuario no encontrado.";
-    }
-
-    $conexion->close();
-}
-
-// Verificar si el formulario ha sido enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST['invitado'])) {
-        $_SESSION['usuario'] = 'Invitado';
-        header("Location: informacion.php");
-        exit();
-    } else {
-        $usuario = $_POST['usuario'];
-        $contrasena = $_POST['contrasena'];
-        autenticarUsuario($usuario, $contrasena);
+        echo "Usuario o contraseña incorrectos.";
     }
 }
 ?>
@@ -65,21 +43,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <title>Login</title>
 </head>
 <body>
-    <h2>Iniciar sesión</h2>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="usuario">Usuario:</label><br>
-        <input type="text" id="usuario" name="usuario" required><br><br>
-        <label for="contrasena">Contraseña:</label><br>
-        <input type="password" id="contrasena" name="contrasena" required><br><br>
+    <h2>Login</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <label for="username">Usuario:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Iniciar sesión">
-    </form>
-    <br>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <input type="hidden" name="invitado" value="true">
-        <input type="submit" value="Acceder como invitado">
     </form>
 </body>
 </html>
