@@ -30,6 +30,17 @@ if (verificarSesion()==true){
         <li><a href="logout.php">Desconectar</a></li>
     </ul>
     <h2>Insertar registros de pilotos</h2>
+    <?php
+    //verificaciones del formulario de insercion de pilotos
+        if (isset($_POST['subirPiloto'])) {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $nombrePiloto=$_POST['piloto'];
+                $biografíaPiloto=$_POST['biografia'];
+                $rutaImagen= "./imagenes"+$_FILES['imagen']['name'];
+                
+            }
+        }else{
+    ?>
     <form action="./admin.php" method="post">
         <fieldset>
         <label for="piloto">Nombre del piloto:</label>
@@ -45,6 +56,14 @@ if (verificarSesion()==true){
         </fieldset>
     </form>
     <h2>Insertar nuevos usuarios</h2>
+    <?php
+    //verificaciones del formulario de insercion de usuarios
+        if (isset($_POST['agregarUsuario'])) {
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $usuario=$_POST['usuario'];
+                $contraseña=$_POST['psswd'];
+            }
+    ?>
     <form action="./admin.php" method="post">
         <fieldset>
         <label for="usuario">Nombre de usuario:</label>
@@ -57,6 +76,8 @@ if (verificarSesion()==true){
         </fieldset>
     </form>
 <?php
+        }
+        }
 }else{
     header("Location: error.php");
 }
