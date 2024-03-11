@@ -19,7 +19,8 @@ CREATE TABLE usuarios (
 -- Crear la tabla de pilotos
 CREATE TABLE pilotos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre_piloto VARCHAR(100) NOT NULL,
+    nombre_piloto VARCHAR(30) NOT NULL,
+    biografia_piloto VARCHAR(200) NOT NULL,
     ruta_imagen VARCHAR(255) NOT NULL,
     FOREIGN KEY (id) REFERENCES usuarios(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;

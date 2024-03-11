@@ -1,0 +1,28 @@
+
+<h2>Insertar registros de pilotos</h2>
+<form action="./admin.php" method="post">
+    <fieldset>
+    <label for="piloto">Nombre del piloto:</label>
+    <input type="text" id="piloto">
+    <br><br>
+    <label for="biografia">Biografia del piloto:</label><br>
+    <textarea id="biografia" cols="30" rows="5"></textarea>
+    <br><br>
+    <label for="imagenPiloto">Imagen del piloto</label>
+    <input type="file" id="imagenPiloto">
+    <br><br>
+    <input type="submit" value="Agregar Piloto" id="subirPiloto">
+    </fieldset>
+</form>
+<h2>Insertar nuevos usuarios</h2>
+<form action="./admin.php" method="post">
+    <fieldset>
+    <label for="usuario">Nombre de usuario:</label>
+    <input type="text" id="usuario">
+    <br><br>
+    <label for="psswd">Contraseña del usuario:</label>
+    <input type="text" id="psswd">
+    <br><br>
+    <input type="submit" value="Agregar usuario" id="agregarUsuario">
+    </fieldset>
+</form>

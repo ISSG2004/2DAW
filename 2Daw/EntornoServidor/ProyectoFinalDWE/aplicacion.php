@@ -15,9 +15,8 @@ function verificarSesion() {
         return false;
     }
 }
-
+if (verificarSesion()==true){
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -30,5 +29,11 @@ function verificarSesion() {
     <ul>
         <li><a href="logout.php">Desconectar</a></li>
     </ul>
+
+<?php
+}else{
+    header("Location: error.php");
+}
+?>
 </body>
 </html>
