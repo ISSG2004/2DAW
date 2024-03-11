@@ -1,41 +1,41 @@
 <?php
-session_start();
+    session_start();
 
-// Configuración de la conexión a la base de datos
-$servername = "localhost";
-$username = "dwes";
-$password = "abc123.";
-$database = "pilotosF1";
+    // Configuración de la conexión a la base de datos
+    $servername = "localhost";
+    $username = "dwes";
+    $password = "abc123.";
+    $database = "pilotosF1";
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $database);
+    // Crear conexión
+    $conn = new mysqli($servername, $username, $password, $database);
 
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM usuarios WHERE nombre_usuario='$username' AND contrasena='$password'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows == 1) {
-        $row = $result->fetch_assoc();
-        $_SESSION['username'] = $username;
-        $_SESSION['tipo'] = $row['tipo'];
-        
-        if ($row['tipo'] == 'admin') {
-            header("Location: admin.php");
-        } elseif ($row['tipo'] == 'normal') {
-            header("Location: aplicacion.php");
-        }
-    } else {
-        echo "Usuario o contraseña incorrectos.";
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("Conexión fallida: " . $conn->connect_error);
     }
-}
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $sql = "SELECT * FROM usuarios WHERE nombre_usuario='$username' AND contrasena='$password'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+            $_SESSION['username'] = $username;
+            $_SESSION['tipo'] = $row['tipo'];
+            
+            if ($row['tipo'] == 'admin') {
+                header("Location: admin.php");
+            } elseif ($row['tipo'] == 'normal') {
+                header("Location: aplicacion.php");
+            }
+        } else {
+            echo "Usuario o contraseña incorrectos.";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
