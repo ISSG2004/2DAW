@@ -29,7 +29,8 @@ if (verificarSesion()==true){
     <ul>
         <li><a href="logout.php">Desconectar</a></li>
     </ul>
-
+    <!--Crear para añadir a favoritos pilotos(Es el sustituto al carrito)-->
+    <!--Recorrer la tabla pilotos para mostrar todos los datos-->
 <?php
 }else{
     header("Location: error.php");
