@@ -57,9 +57,10 @@ if (verificarSesion()==true){
                 echo "Nombre del Piloto: " . $fila["nombre_piloto"]. "<br><br>";
                 echo "Biografía del Piloto: " . $fila["biografia_piloto"]. "<br><br>";
                 echo '<img src="' . $fila["ruta_imagen"] . '" alt="Imagen del Piloto" width="200">'."<br><br>";
-                // Agregar un formulario para borrar el registro actual
-                echo '<form action="admin.php" method="post">';
-                echo '<input type="hidden" name="id" value="' . $fila["id"] . '">';
+                // Agregar un formulario para añadir el piloto a favoritos
+                echo '<form action="agregar_favorito.php" method="post">';
+                echo '<input type="hidden" name="piloto_id" value="' . $fila["id"] . '">';
+                echo '<input type="submit" value="Añadir a Favoritos">';
                 echo '</form>';
                 echo "<hr>";
             }
@@ -71,9 +72,11 @@ if (verificarSesion()==true){
         $conn->close();
     ?>
 </body>
-<?php
-}else{
-    header("Location: error.php");
-}
-?>
+
 </html>
+>
+<?php
+    }else{
+        header("Location: error.php");
+    }
+?>
