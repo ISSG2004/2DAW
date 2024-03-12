@@ -70,10 +70,10 @@ if (verificarSesion()==true){
         // Cerrar conexión
         $conn->close();
     ?>
+</body>
 <?php
 }else{
     header("Location: error.php");
 }
 ?>
-</body>
 </html>
